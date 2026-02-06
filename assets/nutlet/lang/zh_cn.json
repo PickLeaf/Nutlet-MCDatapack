@@ -1,0 +1,9 @@
+{
+    "nutlet.mod_name": "小坚果",
+    "nutlet.link": "[链接]",
+    "nutlet.load_wrong_version": "(被加载到了错误的版本！)",
+    "nutlet.load_resourcepack": "",
+    "nutlet.advancement.recipe.description": "在%s中使用%s、%s、%s合成",
+    "nutlet.advancement.spell_book.name": "别敲空格！",
+    "nutlet.item.spell_book.name": "咒法书"
+}

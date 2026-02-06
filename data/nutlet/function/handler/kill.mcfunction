@@ -1,0 +1,1 @@
+function nutlet:handler/macro/kill with storage nutlet:var data

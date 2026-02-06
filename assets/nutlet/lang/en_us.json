@@ -1,0 +1,9 @@
+{
+    "nutlet.mod_name": "Nutlet",
+    "nutlet.link": "[Link]",
+    "nutlet.load_wrong_version": "(Be loaded to WRONG version!)",
+    "nutlet.load_resourcepack": "",
+    "nutlet.advancement.recipe.description": "Use %s, %s, %s craft on %s",
+    "nutlet.advancement.spell_book.name": "Don't Type Space!",
+    "nutlet.item.spell_book.name": "Spell Book"
+}

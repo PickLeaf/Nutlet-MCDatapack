@@ -1,0 +1,41 @@
+{
+    "parent": "nutlet:root",
+    "display": {
+        "title": {
+            "translate": "nutlet.advancement.spell_book.name",
+            "fallback": "Don't Type Space!"
+        },
+        "description": {
+            "translate": "nutlet.advancement.recipe.description",
+            "fallback": "Use %s, %s, %s craft on %s",
+            "with": [
+                {"translate": "item.minecraft.book"},
+                {"translate": "item.minecraft.glow_ink_sac"},
+                {"translate": "item.minecraft.feather"},
+                {"translate": "block.minecraft.crafting_table"}
+
+            ]
+        },
+        "icon": {
+        "id": "minecraft:writable_book",
+        "components": {
+            "minecraft:enchantments": {
+                "nutlet:spellcasting": 1
+            }
+        }
+    }
+    },
+    "criteria": {
+        "craft": {
+            "trigger": "minecraft:recipe_crafted",
+            "conditions": {
+                "recipe_id": "nutlet:spell_book"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "craft"
+        ]
+    ]
+}

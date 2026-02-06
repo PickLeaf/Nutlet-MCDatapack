@@ -1,0 +1,28 @@
+{
+    "parent": "nutlet:recipe",
+    "display": {
+        "title": {
+            "translate": "nutlet.advancement.recipe.title",
+            "fallback": "What Usage of Spell Book?"
+        },
+        "description": {
+            "translate": "nutlet.advancement.recipe.description",
+            "fallback": "Write down 'cobblestone' in Spell Book(first page), then left click the ground with Spell Book.\nWrite 'glowing', then attach a chicken."
+        },
+        "icon": {
+            "id": "minecraft:lead"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": [
+        [
+            "tick"
+        ]
+    ]
+}

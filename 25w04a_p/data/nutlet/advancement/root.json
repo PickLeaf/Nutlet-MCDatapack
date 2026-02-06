@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "translate": "nutlet.mod_name",
+            "fallback": "Nutlet"
+        },
+        "description": "",
+        "icon": {
+            "id": "minecraft:writable_book"
+        },
+        "background": "minecraft:block/smooth_stone"
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": [
+        [
+            "tick"
+        ]
+    ]
+}

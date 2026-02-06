@@ -1,0 +1,50 @@
+{
+    "anvil_cost": 4,
+    "description": {
+        "translate": "nutlet.enchantment.spellcasting",
+        "fallback": "Spellcasting"
+    },
+    "effects": {
+        "minecraft:post_attack": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "nutlet:spell/post_attack_attacker"
+                },
+                "affected": "attacker",
+                "enchanted": "attacker"
+            },
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "nutlet:spell/post_attack_victim"
+                },
+                "affected": "victim",
+                "enchanted": "attacker"
+            }
+        ],
+        "minecraft:hit_block": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "nutlet:spell/hit_block"
+                }
+            }
+        ]
+    },
+    "max_cost": {
+        "base": 2,
+        "per_level_above_first": 0
+    },
+    "min_cost": {
+        "base": 2,
+        "per_level_above_first": 0
+    },
+    "max_level": 1,
+    "slots": [
+        "any"
+    ],
+    "supported_items": "minecraft:writable_book",
+    "primary_items": [],
+    "weight": 1
+}

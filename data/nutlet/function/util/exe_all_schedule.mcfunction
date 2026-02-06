@@ -3,6 +3,6 @@ data modify storage nutlet:var schedule_exe_list \
   set from storage nutlet:pvt schedule
 data remove storage nutlet:pvt schedule
 schedule clear nutlet:schedule/exe
-function nutlet:schedule/exe/loop
+function nutlet:schedule/loop
 data remove storage nutlet:var schedule_exe_list
-data remove storage nutlet:args data
+data remove storage nutlet:var data

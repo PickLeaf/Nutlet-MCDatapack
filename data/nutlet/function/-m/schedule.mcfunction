@@ -1,47 +1,27 @@
 # argument:
-# --nutlet:args 'data.cmd'
-# --nutlet:args 'tick'
-#
-# return fail : add task successfully
-#
-# return 1 : Function Macro 'tick' <= 0
-# can not /schedule a functoin 0t later
+# --nutlet:var schedule.task.handler[string] : a function
+# --nutlet:var schedule.task.data[compound] : when 'handler' be execute, 'data' will appear again in nutlet:var data
+# --nutlet:var schedule.tick[int] : need > 1
+# --nutlet:var schematic.keepData[enum{1b,*}] (optional): doesn't delete data nutlet:var schedule when function done
 
+# standard handler:
+# --nutlet:handler/kill : kill an entity via uuid(hex format) provide by --nutlet:var schedule.task.data.uuid
 
-#check tick
+function nutlet:schedule/append_exe with storage \
+    nutlet:var schedule
+
 execute store result score A Nutlet.Clac \
-  run data get storage nutlet:args tick
-execute if score A Nutlet.Clac matches ..1 \
-  run return run function nutlet:util/chat/print_error \
-  {msg:"  nutlet:m/schedule:\\n  Function Macro 'tick' require >= 2 "}
-execute unless entity @s \
-  run return run function nutlet:util/chat/print_error \
-  {msg:"  nutlet:m/schedule:\\n  missing executor"}
+    run time query gametime
+execute store result score B Nutlet.Clac \
+    run data get storage nutlet:var schedule.tick
+scoreboard players operation A Nutlet.Clac += B Nutlet.Clac
+execute store result storage \
+    nutlet:var schedule.task.timeStamp long 1 \
+        run scoreboard players get A Nutlet.Clac
 
-#get executor
-function nutlet:schedule/get/executor
+data modify storage nutlet:pvt schedule \
+    append from storage nutlet:var schedule.task
 
-#get executor's position
-function nutlet:schedule/get/position
-
-#get chunk forceload or not
-function nutlet:schedule/get/loaded
-
-#get dimension
-function nutlet:schedule/get/dimension
-
-data modify storage nutlet:args handler \
-  set value "nutlet:schedule/handler/pre_load"
-
-#add task to schedule list
-execute store result score A Nutlet.Clac \
-  run data get storage nutlet:args tick
-scoreboard players remove A Nutlet.Clac 1
-execute store result storage nutlet:var schedule.tick long 1 \
-  run scoreboard players get A Nutlet.Clac
-function nutlet:schedule/add \
-  with storage nutlet:var schedule
-
+execute if data storage nutlet:var schedule{keepData:1b} \
+    run return fail
 data remove storage nutlet:var schedule
-data remove storage nutlet:args tick
-return fail

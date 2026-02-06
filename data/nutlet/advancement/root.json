@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "translate": "nutlet.mod_name",
+            "fallback": "Nutlet"
+        },
+        "description": "",
+        "icon": {
+            "id": "minecraft:oak_wood"
+        },
+        "announce_to_chat": false,
+        "show_toast": false,
+        "frame": "challenge",
+        "background": "minecraft:textures/block/smooth_stone.png"
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": [
+        [
+            "tick"
+        ]
+    ]
+}

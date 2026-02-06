@@ -1,0 +1,1 @@
+$data modify storage nutlet:var spells_exe_list append from storage nutlet:mem spells[{spell:"$(spell)"}]
