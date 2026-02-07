@@ -17,7 +17,8 @@
             "minecraft:enchantments": {
                 "nutlet:spellcasting": 1
             },
-            "minecraft:item_name": "{\"translate\":\"nutlet.item.spell_book.name\",\"fallback\":\"Spell Book\"}"
+            "minecraft:item_name": 
+                "{\"translate\":\"nutlet.item.spell_book.name\",\"fallback\":\"Spell Book\"}"
         }
     }
 }

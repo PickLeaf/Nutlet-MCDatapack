@@ -3,7 +3,15 @@
     "nutlet.link": "[Link]",
     "nutlet.load_wrong_version": "(Be loaded to WRONG version!)",
     "nutlet.load_resourcepack": "",
+    "nutlet.advancement.root_description": "Please install \"Better Advancements\" mod first to improve the advancement UI.",
     "nutlet.advancement.recipe.description": "Use %s, %s, %s craft on %s",
-    "nutlet.advancement.spell_book.name": "Don't Type Space!",
-    "nutlet.item.spell_book.name": "Spell Book"
+    "nutlet.advancement.recipe.name": "Don't Type Space!",
+    "nutlet.advancement.recipe.title": "Write down 'Grow Arms' in Spell Book(first page), then Left-click a %s with Spell Book.\nWrite 'Call Lightning', then Left-click a %s.\nWrite 'Become Transparent', then Left-click a block attached with an %s.",
+    "nutlet.item.spell_book.name": "Spell Book",
+    "nutlet.info.no_spell": "It seems your spell has no effect...",
+    "nutlet.info.transparent_suc": "You successfully made it transparent!",
+    "nutlet.info.grow_arms_suc": "You successfully made it grow arms!",
+    "nutlet.info.call_lightning_fail_1": "You must hit a %s to call lightning.",
+    "nutlet.info.call_lightning_fail_2": "You need to throw one %s on the lightning rod.",
+    "nutlet.info.call_lightning_suc": "The thunder has arrived!"
 }

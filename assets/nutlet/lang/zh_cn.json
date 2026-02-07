@@ -3,7 +3,15 @@
     "nutlet.link": "[链接]",
     "nutlet.load_wrong_version": "(被加载到了错误的版本！)",
     "nutlet.load_resourcepack": "",
+    "nutlet.advancement.root_description": "请先安装 \"更好的进度\"　模组以改进进度UI",
     "nutlet.advancement.recipe.description": "在%s中使用%s、%s、%s合成",
-    "nutlet.advancement.spell_book.name": "别敲空格！",
-    "nutlet.item.spell_book.name": "咒法书"
+    "nutlet.advancement.recipe.name": "别敲空格！",
+    "nutlet.advancement.recipe.title": "在咒法书（第一页）上写下“Grow Arms”，然后用咒法书左击一个%s。\n写下“Call Lightning”，然后左击一个%s。\n写下“Become Transparent”，然后左击一个被%s附着的方块。",
+    "nutlet.item.spell_book.name": "咒法书",
+    "nutlet.info.no_spell": "看起来你的咒法并没有什么效果……",
+    "nutlet.info.transparent_suc": "你成功让它变透明了！",
+    "nutlet.info.grow_arms_suc": "你成功让它长出了手臂！",
+    "nutlet.info.call_lightning_fail_1": "你必须击打一个 %s 才能召唤闪电。",
+    "nutlet.info.call_lightning_fail_2": "你需要在避雷针上扔一个%s。",
+    "nutlet.info.call_lightning_suc": "雷霆已至！"
 }

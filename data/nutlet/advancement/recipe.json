@@ -2,7 +2,7 @@
     "parent": "nutlet:root",
     "display": {
         "title": {
-            "translate": "nutlet.advancement.spell_book.name",
+            "translate": "nutlet.advancement.recipe.name",
             "fallback": "Don't Type Space!"
         },
         "description": {

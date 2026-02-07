@@ -4,7 +4,10 @@
             "translate": "nutlet.mod_name",
             "fallback": "Nutlet"
         },
-        "description": "",
+        "description": {
+            "translate": "nutlet.advancement.root_description",
+            "fallback": "Please install \"Better Advancements\" mod first to improve the advancement UI."
+        },
         "icon": {
             "id": "minecraft:oak_wood"
         },

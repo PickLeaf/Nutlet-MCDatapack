@@ -5,6 +5,14 @@
         "fallback": "Spellcasting"
     },
     "effects": {
+        "minecraft:hit_block": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "nutlet:spell/hit_block"
+                }
+            }
+        ],
         "minecraft:post_attack": [
             {
                 "effect": {
@@ -21,14 +29,6 @@
                 },
                 "affected": "victim",
                 "enchanted": "attacker"
-            }
-        ],
-        "minecraft:hit_block": [
-            {
-                "effect": {
-                    "type": "minecraft:run_function",
-                    "function": "nutlet:spell/hit_block"
-                }
             }
         ]
     },

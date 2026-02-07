@@ -7,7 +7,12 @@
         },
         "description": {
             "translate": "nutlet.advancement.recipe.description",
-            "fallback": "Write down 'cobblestone' in Spell Book(first page), then left click the ground with Spell Book.\nWrite 'glowing', then attach a chicken."
+            "fallback": "Write down 'Grow Arms' in Spell Book(first page), then Left-click a %s with Spell Book.\nWrite 'Call Lightning', then Left-click a %s.\nWrite 'Become Transparent', then Left-click a block attached with an %s.",
+            "with": [
+                {"translate": "entity.minecraft.armor_stand"},
+                {"translate": "block.minecraft.lightning_rod"},
+                {"translate": "entity.minecraft.item_frame"}
+            ]
         },
         "icon": {
             "id": "minecraft:lead"
