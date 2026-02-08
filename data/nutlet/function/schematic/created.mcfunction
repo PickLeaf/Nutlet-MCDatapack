@@ -13,8 +13,8 @@ data modify entity @s brightness.sky \
     set from storage nutlet:var schematic.bright
 
 tag @s add nutlet.display
-execute if data storage nutlet:var schematic{tick:0} \
-    run tag @s add temp_display
+execute unless data storage nutlet:var schematic{tick:0} \
+    run tag @s add nutlet.temp_display
 
 # return hex format uuid
 data modify storage nutlet:var uuid.array \
