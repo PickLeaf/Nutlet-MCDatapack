@@ -6,6 +6,14 @@
 
 # standard handler:
 # --nutlet:handler/kill : kill an entity via uuid(hex format) provide by --nutlet:var schedule.task.data.uuid
+# --nutlet:handler/strict_kill : \
+#       kill an entity via uuid(hex format), Definitely, but need additional arguments
+#       argument:
+#          -nutlet:var schedule.task.data.uuid : hex format
+#          -nutlet:var schedule.task.data.x
+#          -nutlet:var schedule.task.data.y
+#          -nutlet:var schedule.task.data.z : the position of the entity
+#          -nutlet:var schedule.task.data.dimension : the dimension entity has
 
 function nutlet:schedule/append_exe with storage \
     nutlet:var schedule

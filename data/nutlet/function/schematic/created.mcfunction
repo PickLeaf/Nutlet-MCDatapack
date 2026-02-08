@@ -26,10 +26,22 @@ data remove storage nutlet:var uuid
 # schedule kill if tick limit is set
 execute if data storage nutlet:var schematic{tick:0} \
     run return fail
+
+data modify storage nutlet:var schedule.task.data.dimension \
+    set from storage nutlet:var schematic.dimension
+data modify storage nutlet:var schedule.task.data.x \
+    set from entity @s Pos[0]
+data modify storage nutlet:var schedule.task.data.y \
+    set from entity @s Pos[1]
+data modify storage nutlet:var schedule.task.data.z \
+    set from entity @s Pos[2]
+
 data modify storage nutlet:var schedule.task.data.uuid \
     set from storage nutlet:var schematic.uuid
+
 data modify storage nutlet:var schedule.task.handler \
-    set value "nutlet:handler/kill"
+    set value "nutlet:handler/strict_kill"
+
 data modify storage nutlet:var schedule.tick \
     set from storage nutlet:var schematic.tick
 function nutlet:-m/schedule

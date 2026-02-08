@@ -21,6 +21,8 @@ execute if data storage nutlet:var schematic{bright:-1} \
 # create block display entity
 $execute if predicate nutlet:$(hasProp) \
     run data modify storage nutlet:var schematic.hasProp set value 1b
+data modify storage nutlet:var schematic.dimension \
+    set from entity @s Dimension
 execute summon minecraft:block_display \
     run function nutlet:schematic/block_create
 
@@ -30,6 +32,7 @@ execute if data storage nutlet:var schematic{autoBright:1b} \
 
 data remove storage nutlet:var schematic.hasProp
 data remove storage nutlet:var schematic.autoBright
+data remove storage nutlet:var schematic.dimension
 
 # clean up unless keepData is set
 execute if data storage nutlet:var schematic{keepData:1b} \
