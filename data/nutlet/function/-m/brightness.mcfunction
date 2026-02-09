@@ -2,7 +2,7 @@
 # --Command Context : the execute position where the brightness is calculated
 
 # return:
-# --nutlet:var bright.brightness[string] : brightness in the execute position
+# --nutlet:var bright.brightness[int] : brightness in the execute position
 
 execute align xyz positioned ~0.5 ~0.5 ~0.5 \
     run function nutlet:brightness/direct

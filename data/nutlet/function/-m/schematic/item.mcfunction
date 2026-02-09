@@ -1,4 +1,5 @@
 # argument:
+# --Command Context : the execute rotation
 # --nutlet:var schematic.id[string] : a namespace id of item
 # --nutlet:var schematic.tick[int] : ticks that the phantom item of schematic will continue existing, 0 for infinite
 # --nutlet:var schematic.transformation[float] : The rendering transformation applied to model after normal entity orientation https://minecraft.wiki/w/Display https://zh.minecraft.wiki/w/展示实体
