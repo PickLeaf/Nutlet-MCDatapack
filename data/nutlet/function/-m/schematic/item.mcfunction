@@ -19,6 +19,7 @@ execute if data storage nutlet:var schematic{bright:-1} \
     run function nutlet:schematic/auto_bright
 
 # create item display entity
+data remove storage nutlet:var schematic.hasProp
 $execute if predicate nutlet:$(hasComponent) \
     run data modify storage nutlet:var schematic.hasComponent set value 1b
 data modify storage nutlet:var schematic.dimension \

@@ -11,6 +11,16 @@
 # return:
 # --nutlet:var schematic.uuid[string] : hex format of summoned block display entity UUID
 
+data remove storage nutlet:var schematic.hasProp
+$execute if predicate nutlet:$(hasProp) \
+    run data modify storage nutlet:var schematic.hasProp set value 1b
+
+# return if block exists
+execute unless function nutlet:schematic/check_block \
+    run return run \
+        data remove storage nutlet:var to_prop
+data remove storage nutlet:var to_prop
+
 # fill in default parameters of nutlet:var schematic.transformation
 function nutlet:schematic/fill_default_trans
 
@@ -19,8 +29,6 @@ execute if data storage nutlet:var schematic{bright:-1} \
     run function nutlet:schematic/auto_bright
 
 # create block display entity
-$execute if predicate nutlet:$(hasProp) \
-    run data modify storage nutlet:var schematic.hasProp set value 1b
 data modify storage nutlet:var schematic.dimension \
     set from entity @s Dimension
 execute summon minecraft:block_display \

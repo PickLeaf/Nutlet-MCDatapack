@@ -1,0 +1,1 @@
+$data modify storage nutlet:var to_prop.prop set value '$(prop)$(char)'

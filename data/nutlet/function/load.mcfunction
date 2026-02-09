@@ -1,4 +1,5 @@
 scoreboard objectives add Nutlet.Clac dummy
+gamerule commandBlockOutput false
 
 function nutlet:config
 function #nutlet:config
