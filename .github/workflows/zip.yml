@@ -1,0 +1,30 @@
+name: Archive & Release Draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release tag'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@master
+    - name: Archive Release
+      uses: thedoctor0/zip-release@0.7.5
+      with:
+        type: 'zip'
+        filename: 'Nutlet_${{ inputs.version }}.zip'
+        exclusions: '*.git* /*node_modules/* .editorconfig'
+
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      with:
+        name: '${{inputs.version}} For MC1.21.x'
+        tag_name: '${{inputs.version}}-MC1.21.x'
+        files: 'Nutlet_${{inputs.version}}.zip'
+        token: ${{ secrets.GITHUB_TOKEN }}
