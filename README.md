@@ -17,8 +17,8 @@ tp $(hex) ~ 255 ~
 function test:test with storage nutlet:var uuid
 ```
 ## nutlet:-m/schedule
-先编写以下函数文件：
-test:test.mcfunction
+先编写以下函数文件：<br>
+`test:test.mcfunction`
 ```mcfunction
 tellraw @a {"storage": "nutlet:var","nbt": "data.msg"}
 ```
@@ -36,18 +36,18 @@ tellraw @a {"storage": "nutlet:var","nbt": "bright.brightness"}
 ```
 会获得执行位置的亮度等级，内部使用`location_check`谓词检查穷举获得。如果执行位置亮度为0且不是空气，会从执行位置六个面挨着的方块里选取最大的那个亮度作为结果。结果存储在`nutlet:var bright.brightness`。
 ## nutlet:-m/facing/block
-获得执行位置的方块的朝向，通过`nutlet:var facing.success`判断是否成功(1b成功,0b失败)。只有具有facing和orientation(仅合成器有)方块属性的方块可以成功。
-`nutlet:var facing.facing`返回朝向
-`nutlet:var facing.orientation`返回合成器方向
+获得执行位置的方块的朝向，通过`nutlet:var facing.success`判断是否成功(1b成功,0b失败)。只有具有facing和orientation(仅合成器有)方块属性的方块可以成功。<br>
+`nutlet:var facing.facing`返回朝向<br>
+`nutlet:var facing.orientation`返回合成器方向<br>
 `nutlet:var facing.x_rotation`，`nutlet:var facing.y_rotation`返回对应的旋转角度
 ## nutlet:-m/facing/entity
-获得执行旋转角度对应的面朝方向，与F3界面的`Facing: `行一致。
-`nutlet:var facing.facing`返回对应的方块朝向
-`nutlet:var facing.orientation`返回对应的合成器方向
+获得执行旋转角度对应的面朝方向，与F3界面的`Facing: `行一致。<br>
+`nutlet:var facing.facing`返回对应的方块朝向<br>
+`nutlet:var facing.orientation`返回对应的合成器方向<br>
 `nutlet:var facing.x_rotation`，`nutlet:var facing.y_rotation`返回对应的旋转角度
 ## nutlet:-m/facing/block_axis_align
-先编写以下函数文件：
-test:test.mcfunction
+先编写以下函数文件：<br>
+`test:test.mcfunction`
 ```mcfunction
 setblock ^ ^ ^1 minecraft:diamond_block
 ```
