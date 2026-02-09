@@ -28,7 +28,8 @@ tellraw @s {"text":"This is a text","color":"yellow"}
 `nutlet:var caller`会在不同调用情况下有不同的值，有三种`function`会被调用的情况，对应魔咒的三种效果：
 1. 拿书左击方块，此时执行实体为玩家，执行位置的被左击的方块的正中心。
 2. 拿书攻击实体，执行实体为玩家
-3. 拿书攻击实体，执行实体为被攻击的实体<br>
+3. 拿书攻击实体，执行实体为被攻击的实体
+
 三种效果从上至下会依次生效，其时`nutlet:var caller`的值依次为：<br>
 `hit_block`，`post_attack_attacker`，`post_attack_victim`。<br>
 在命名空间`nutlet:spell/example/`下含有一些咒法实现的示例：<br>
@@ -141,7 +142,7 @@ summon的文本展示实体会朝向后方。你需要后退几步，可能还�
 # "handler"参数为一个函数
 function nutlet:-m/schematic/tick {handler:"example:test"}
 ```
-会在执行位置生成一个盔甲架，使用自定义魔咒每tick执行`example:test`函数。使用以下函数会每秒在聊天框输出一次`hello,world!`：
+会在执行位置生成一个盔甲架，使用自定义魔咒每tick执行`example:test`函数。使用以下函数会每秒在聊天框输出一次`hello,world!`：<br>
 `example:test`
 ```mcfunction
 say hello,world!
