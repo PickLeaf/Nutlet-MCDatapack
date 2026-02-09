@@ -1,4 +1,6 @@
 scoreboard objectives add Nutlet.Clac dummy
+function nutlet:util/exe {cmd:"gamerule commandBlockOutput false"}
+function nutlet:util/exe {cmd:"gamerule command_block_output false"}
 
 function nutlet:config
 function #nutlet:config

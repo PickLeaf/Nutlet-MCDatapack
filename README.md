@@ -136,3 +136,16 @@ data modify storage nutlet:var schematic set value {tick:100, mergeData:{backgro
 execute facing ^ ^ ^-1 run function nutlet:-m/schematic/text
 ```
 summon的文本展示实体会朝向后方。你需要后退几步，可能还要破坏地板，就能看见它了。
+## nutlet:-m/schematic/tick
+```mcfunction
+# "handler"参数为一个函数
+function nutlet:-m/schematic/tick {handler:"example:test"}
+```
+会在执行位置生成一个盔甲架，使用自定义魔咒每tick执行`example:test`函数。使用以下函数会每秒在聊天框输出一次`hello,world!`：
+`example:test`
+```mcfunction
+say hello,world!
+# 使用计分板延时20tick后才会再次调用此函数
+scoreboard players set @s Nutlet.Clac 20
+```
+你可以注意到发出信息的名称是`example:test`，你可以用`data modify entity @s CustomName`改变函数调用。使用`kill @s`结束。
