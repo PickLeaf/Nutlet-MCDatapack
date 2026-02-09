@@ -1,5 +1,42 @@
-可供调用的函数都在命名空间 `Nutlet:-m` 下。<br>
+# 咒法书
+咒法书可以通过在工作台用书、荧光墨囊、羽毛合成，其带一个自定义魔咒(有人知道怎么隐藏物品信息里魔咒的那一行吗?)。
+你可以在书里写一些内容来实现一些功能。
+## 重载`#nutlet:spells`函数标签
+你应该在`<你的存档>/datapack/<你的数据包>/data/nutlet/tags/function/spells.json`写入你的函数，类似这样：
+```json
+{
+    "replace": false,
+    "values": [
+        "example:register_spells"
+    ]
+}
+```
+nutlet会在进入存档时调用`example:register_spells`函数，你可以注册咒法类似这样：
+```mcfunction
+data modify storage nutlet:mem spells append value \
+    {spell:"Example!", function:"example:spells/example"}
+```
+`spell`为咒法文本，`function`为使用咒法书时的调用的函数，实现你的函数来实现咒法应该有的效果：<br>
+`example:spells/example`
+```mcfunction
+# 如果不是拿书左击方块时被调用则返回
+execute unless data storage nutlet:var {caller:"hit_block"} \
+    run return fail
+# 实现咒法效果 
+tellraw @s {"text":"This is a text","color":"yellow"}
+```
+`nutlet:var caller`会在不同调用情况下有不同的值，有三种`function`会被调用的情况，对应魔咒的三种效果：
+1. 拿书左击方块，此时执行实体为玩家，执行位置的被左击的方块的正中心。
+2. 拿书攻击实体，执行实体为玩家
+3. 拿书攻击实体，执行实体为被攻击的实体
+三种效果从上至下会依次生效，其时`nutlet:var caller`的值依次为：<br>
+`hit_block`，`post_attack_attacker`，`post_attack_victim`。<br>
+在命名空间`nutlet:spell/example/`下含有一些咒法实现的示例：<br>
+`Grow Arms`使盔甲架长出手臂。<br>
+`Become Transparent`使方块上附着的物品展示框变透明。<br>
+`Call Lightning`点击避雷针生成闪电。
 # 用例
+可供调用的函数一般在命名空间`Nutlet:-m/`下。<br>
 ## nutlet:-m/hex_uuid
 执行以下命令：
 ```mcfunction
