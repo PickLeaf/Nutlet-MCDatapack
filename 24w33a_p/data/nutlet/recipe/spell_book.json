@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "minecraft:book",
+        "minecraft:glow_ink_sac",
+        "minecraft:feather"
+    ],
+    "result": {
+        "id": "minecraft:writable_book",
+        "components": {
+            "minecraft:enchantments": {
+                "nutlet:spellcasting": 1
+            },
+            "minecraft:item_name": {
+                "translate": "nutlet.item.spell_book.name",
+                "fallback": "Spell Book"
+            }
+        }
+    }
+}

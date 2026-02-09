@@ -17,6 +17,12 @@
 	"overlays": {
 		"entries": [
 			{
+				"formats": [49, 9999],
+				"min_format": 49,
+				"max_format": 9999,
+				"directory": "24w33a_p"
+			},
+			{
 				"formats": [62, 9999],
 				"min_format": 62,
 				"max_format": 9999,
@@ -29,9 +35,9 @@
 				"directory": "25w04a_p"
 			},
 			{
-				"formats": [48, 88],
+				"formats": [48, 94],
 				"min_format": 48,
-				"max_format": 88,
+				"max_format": 94,
 				"directory": "print_info"
 			}
 		]
