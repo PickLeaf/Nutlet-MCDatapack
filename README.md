@@ -25,6 +25,7 @@ execute unless data storage nutlet:var {caller:"hit_block"} \
 # 实现咒法效果 
 tellraw @s {"text":"This is a text","color":"yellow"}
 ```
+现在在咒法书第一页写入"Example!"，然后左击地面，你会在聊天栏收到"This is a text"（黄色的）。<br>
 `nutlet:var caller`会在不同调用情况下有不同的值，有三种`function`会被调用的情况，对应魔咒的三种效果：
 1. 拿书左击方块，此时执行实体为玩家，执行位置的被左击的方块的正中心。
 2. 拿书攻击实体，执行实体为玩家
