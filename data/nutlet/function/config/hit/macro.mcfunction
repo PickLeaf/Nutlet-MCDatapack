@@ -1,0 +1,1 @@
+$return run data modify storage nutlet:var config.result set from storage nutlet:config list[{name:"$(1)"}]

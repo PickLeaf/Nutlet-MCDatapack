@@ -3,6 +3,7 @@
     "nutlet.link": "[链接]",
     "nutlet.load_wrong_version": "(被加载到了错误的版本！)",
     "nutlet.load_resourcepack": "",
+    "nutlet.enchantment.spellcasting": "施法",
     "nutlet.advancement.root_description": "请先安装 \"更好的进度\"　模组以改进进度UI",
     "nutlet.advancement.recipe.description": "在%s中使用%s、%s、%s合成",
     "nutlet.advancement.recipe.name": "别敲空格！",
@@ -13,5 +14,10 @@
     "nutlet.info.grow_arms_suc": "你成功让它长出了手臂！",
     "nutlet.info.call_lightning_fail_1": "你必须击打一个 %s 才能召唤闪电。",
     "nutlet.info.call_lightning_fail_2": "你需要在避雷针上扔一个%s。",
-    "nutlet.info.call_lightning_suc": "雷霆已至！"
+    "nutlet.info.call_lightning_suc": "雷霆已至！",
+    "nutlet.info.config.current_value": "当前值: ",
+    "nutlet.info.config.default_value": "默认值: ",
+    "nutlet.info.config.print": "在此存档中搜索到的配置：",
+    "nutlet.info.config.wrong_set": "修改配置失败，请检查值的格式是否正确。",
+    "nutlet.info.config.success": "配置%s现在已设置为：%s"
 }

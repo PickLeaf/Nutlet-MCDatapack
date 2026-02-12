@@ -3,5 +3,6 @@
 # 接受的值: 
 # acceptable vales: 
 # [1b, 0b]
-data modify storage nutlet:config \
-    showVersion set value 1b
+data modify storage nutlet:config list append value \
+    {description:"Whether to print version info of Nutlet when login the world",\
+    name:"Nutlet:Print Version",  storage_path:"nutlet:config showVersion", default:"1b", type:"storage"}

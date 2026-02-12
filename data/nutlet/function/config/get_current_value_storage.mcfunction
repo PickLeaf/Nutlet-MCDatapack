@@ -1,0 +1,1 @@
+$data modify storage nutlet:var config.result.curent_value set from storage $(storage_path)

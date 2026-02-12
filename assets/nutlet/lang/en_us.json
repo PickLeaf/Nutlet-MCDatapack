@@ -3,6 +3,7 @@
     "nutlet.link": "[Link]",
     "nutlet.load_wrong_version": "(Be loaded to WRONG version!)",
     "nutlet.load_resourcepack": "",
+    "nutlet.enchantment.spellcasting": "Spellcasting",
     "nutlet.advancement.root_description": "Please install \"Better Advancements\" mod first to improve the advancement UI.",
     "nutlet.advancement.recipe.description": "Use %s, %s, %s craft on %s",
     "nutlet.advancement.recipe.name": "Don't Type Space!",
@@ -13,5 +14,10 @@
     "nutlet.info.grow_arms_suc": "You successfully made it grow arms!",
     "nutlet.info.call_lightning_fail_1": "You must hit a %s to call lightning.",
     "nutlet.info.call_lightning_fail_2": "You need to throw one %s on the lightning rod.",
-    "nutlet.info.call_lightning_suc": "The thunder has arrived!"
+    "nutlet.info.call_lightning_suc": "The thunder has arrived!",
+    "nutlet.info.config.current_value": "Current Value: ",
+    "nutlet.info.config.default_value": "Default Value: ",
+    "nutlet.info.config.print": "Configurations found in this world:",
+    "nutlet.info.config.wrong_set": "Failed to modify the config. Please check if the value format is correct.",
+    "nutlet.info.config.success": "Config %s is now set to: %s"
 }

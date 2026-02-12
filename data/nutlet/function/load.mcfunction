@@ -1,16 +1,20 @@
 scoreboard objectives add Nutlet.Clac dummy
+scoreboard objectives add Nutlet.Config dummy
 function nutlet:util/exe {cmd:"gamerule commandBlockOutput false"}
 function nutlet:util/exe {cmd:"gamerule command_block_output false"}
-
-function nutlet:config
-function #nutlet:config
 
 # kill display entities
 kill @e[tag=nutlet.temp_display]
 
+# register configs
+data remove storage nutlet:config list
+function nutlet:config
+function #nutlet:configs
+function nutlet:config/init
+
 # register spells
 data remove storage nutlet:mem spells
-function nutlet:spell/example/register
+function nutlet:spell/default/register
 function #nutlet:spells
 
 # speak version, print info of datapack
