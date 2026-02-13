@@ -24,6 +24,7 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
+        draft: true
         name: '${{inputs.version}} For MC1.21.x'
         tag_name: '${{inputs.version}}-MC1.21.x'
         files: 'Nutlet_${{inputs.version}}.zip'
