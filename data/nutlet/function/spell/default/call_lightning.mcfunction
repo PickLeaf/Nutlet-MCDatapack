@@ -19,7 +19,7 @@ execute positioned ~-0.6 ~-0.6 ~-0.6 unless entity \
             "fallback":"You need to throw one %s on the lightning rod.",\
             "with":[{\
                 "translate":"item.minecraft.gold_ingot"}]}
-title @s actionbar \
+title @s title \
     {"translate":"nutlet.info.call_lightning_suc",\
     "bold":true, "color": "red", \
     "fallback":"The thunder has arrived!"}

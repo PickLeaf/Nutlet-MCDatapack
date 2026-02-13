@@ -1,0 +1,25 @@
+{
+    "parent": "nutlet:transparent",
+    "display": {
+        "title": "Call Lightning",
+        "description": {
+            "translate": "nutlet.advancement.call_lightning.description",
+            "fallback": "Summon Thunder!"
+        },
+        "icon": {
+            "id": "minecraft:lightning_rod"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": [
+        [
+            "tick"
+        ]
+    ]
+}

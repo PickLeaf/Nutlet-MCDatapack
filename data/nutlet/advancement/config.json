@@ -1,0 +1,25 @@
+{
+    "parent": "nutlet:call_lightning",
+    "display": {
+        "title": "Config",
+        "description": {
+            "translate": "nutlet.advancement.config.description",
+            "fallback": "Page 2: Enter a configuration name to view details or modify it. Leave blank to view all configurations.\nPage 3: Enter the new value for the configuration from Page 2. Leave blank to view the default value."
+        },
+        "icon": {
+            "id": "minecraft:redstone_torch"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": [
+        [
+            "tick"
+        ]
+    ]
+}

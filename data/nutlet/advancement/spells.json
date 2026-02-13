@@ -1,0 +1,28 @@
+{
+    "parent": "nutlet:usage",
+    "display": {
+        "title": {
+            "translate": "nutlet.advancement.spells.title",
+            "fallback": "All Spells"
+        },
+        "description": {
+            "translate": "nutlet.advancement.spells.description",
+            "fallback": "The titles of advancement following this advancement are all text content required for casting spells."
+        },
+        "icon": {
+            "id": "minecraft:light"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": [
+        [
+            "tick"
+        ]
+    ]
+}

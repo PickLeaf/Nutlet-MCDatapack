@@ -1,0 +1,29 @@
+{
+    "parent": "nutlet:show_arms",
+    "display": {
+        "title": "Become Transparent",
+        "description": {
+            "translate": "nutlet.advancement.transparent.description",
+            "fallback": "%s a block attached with an %s to make it Transparent.",
+            "with": [
+                {"translate": "key.attack"},
+                {"translate": "entity.minecraft.item_frame"}
+            ]
+        },
+        "icon": {
+            "id": "minecraft:item_frame"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": [
+        [
+            "tick"
+        ]
+    ]
+}

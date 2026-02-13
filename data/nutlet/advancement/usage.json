@@ -2,16 +2,14 @@
     "parent": "nutlet:recipe",
     "display": {
         "title": {
-            "translate": "nutlet.advancement.recipe.title",
+            "translate": "nutlet.advancement.usage.title",
             "fallback": "What Usage of Spell Book?"
         },
         "description": {
-            "translate": "nutlet.advancement.recipe.description",
-            "fallback": "Write down 'Grow Arms' in Spell Book(first page), then Left-click a %s with Spell Book.\nWrite 'Call Lightning', then Left-click a %s.\nWrite 'Become Transparent', then Left-click a block attached with an %s.",
+            "translate": "nutlet.advancement.usage.description",
+            "fallback": "To cast spells, you need to write specific content on the first page of the book. Hold the book and press %s key to activate the spell that matches the written content.",
             "with": [
-                {"translate": "entity.minecraft.armor_stand"},
-                {"translate": "block.minecraft.lightning_rod"},
-                {"translate": "entity.minecraft.item_frame"}
+                {"translate": "key.attack"}
             ]
         },
         "icon": {

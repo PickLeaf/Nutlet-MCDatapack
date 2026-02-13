@@ -1,0 +1,29 @@
+{
+    "parent": "nutlet:put_helmet",
+    "display": {
+        "title": "Grow Arms",
+        "description": {
+            "translate": "nutlet.advancement.show_arms.description",
+            "fallback": "%s a %s to make it Grow Arms.",
+            "with": [
+                {"translate": "key.attack"},
+                {"translate": "entity.minecraft.armor_stand"}
+            ]
+        },
+        "icon": {
+            "id": "minecraft:armor_stand"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": [
+        [
+            "tick"
+        ]
+    ]
+}
