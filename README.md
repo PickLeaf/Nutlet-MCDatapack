@@ -13,7 +13,7 @@
 ```
 nutlet会在进入存档时调用`example:register_spells`函数，你可以注册咒法类似这样：
 ```mcfunction
-data modify storage nutlet:mem spells append value \
+data modify storage nutlet:spell list append value \
     {spell:"Example!", function:"example:spells/example"}
 ```
 `spell`为咒法文本，`function`为使用咒法书时的调用的函数，实现你的函数来实现咒法应该有的效果：<br>

@@ -13,7 +13,7 @@ function #nutlet:configs
 function nutlet:config/init
 
 # register spells
-data remove storage nutlet:mem spells
+data remove storage nutlet:spell list
 function nutlet:spell/default/register
 function #nutlet:spells
 

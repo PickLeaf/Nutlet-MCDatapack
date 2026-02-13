@@ -1,4 +1,4 @@
-$data modify storage nutlet:var spells_exe_list append from storage nutlet:mem spells[{spell:"$(spell)"}]
+$data modify storage nutlet:var spells_exe_list append from storage nutlet:spell list[{spell:"$(spell)"}]
 execute unless data storage nutlet:var spells_exe_list[0] \
     run title @s actionbar \
         {"translate":"nutlet.info.no_spell",\
