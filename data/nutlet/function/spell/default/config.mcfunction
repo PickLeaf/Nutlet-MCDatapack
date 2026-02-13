@@ -1,11 +1,11 @@
-execute unless data storage nutlet:config {modifyLock:1b} \
-    run tag @s add nutlet.config_privilege
-execute unless data storage nutlet:config {modifyLock:1b} \
-    if entity @s[tag=nutlet.config_privilege] \
-    run data modify storage nutlet:config modifyLock set value 1b
+execute unless data storage nutlet:config modifyLock \
+    run return run \
+        function nutlet:spell/first
+
 execute if data storage nutlet:config {modifyLock:1b} \
     unless entity @s[tag=nutlet.config_privilege] \
-    run return fail
+    run return run \
+        function nutlet:config/no_privilege
 
 data modify storage nutlet:var config.1 \
     set from entity @s \

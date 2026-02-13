@@ -17,12 +17,12 @@ data remove storage nutlet:mem spells
 function nutlet:spell/default/register
 function #nutlet:spells
 
-# speak version, print info of datapack
+# inject version, print info of datapack
 data modify storage nutlet:config version_int set value \
-    [I;1,0,0]
+    [I;1,1,0]
 execute unless data storage nutlet:config \
-{version:"V1.0"} run return \
+{version:"V1.1"} run return \
     run return run \
-        function nutlet:version_changed {version:"V1.0"}
+        function nutlet:version_changed {version:"V1.1"}
 execute if data storage nutlet:config {showVersion:1b} \
     run function nutlet:print/info

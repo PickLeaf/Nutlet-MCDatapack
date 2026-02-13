@@ -1,7 +1,7 @@
 {
     "nutlet.mod_name": "小坚果",
     "nutlet.link": "[链接]",
-    "nutlet.load_wrong_version": "(被加载到了错误的版本！)",
+    "nutlet.load_unexpected_version": "(被加载到了非预期的版本！)",
     "nutlet.load_resourcepack": "",
     "nutlet.enchantment.spellcasting": "施法",
     "nutlet.advancement.root_description": "请先安装 \"更好的进度\"　模组以改进进度UI",
@@ -18,6 +18,8 @@
     "nutlet.info.config.current_value": "当前值: ",
     "nutlet.info.config.default_value": "默认值: ",
     "nutlet.info.config.print": "在此存档中搜索到的配置：",
+    "nutlet.info.config.success": "配置%s现在已设置为：%s",
     "nutlet.info.config.wrong_set": "修改配置失败，请检查值的格式是否正确。",
-    "nutlet.info.config.success": "配置%s现在已设置为：%s"
+    "nutlet.info.config.get_privilege": "作为首位合成出法术书的玩家，你获得了修改这个世界配置的权限。后续合成出法术书的人无法获得此权限。",
+    "nutlet.info.config.no_privilege": "你无权修改此世界的配置。"
 }

@@ -1,7 +1,7 @@
 {
     "nutlet.mod_name": "Nutlet",
     "nutlet.link": "[Link]",
-    "nutlet.load_wrong_version": "(Be loaded to WRONG version!)",
+    "nutlet.load_unexpected_version": "(Be loaded to UNEXPECTED version!)",
     "nutlet.load_resourcepack": "",
     "nutlet.enchantment.spellcasting": "Spellcasting",
     "nutlet.advancement.root_description": "Please install \"Better Advancements\" mod first to improve the advancement UI.",
@@ -18,6 +18,8 @@
     "nutlet.info.config.current_value": "Current Value: ",
     "nutlet.info.config.default_value": "Default Value: ",
     "nutlet.info.config.print": "Configurations found in this world:",
+    "nutlet.info.config.success": "Config %s is now set to: %s",
     "nutlet.info.config.wrong_set": "Failed to modify the config. Please check if the value format is correct.",
-    "nutlet.info.config.success": "Config %s is now set to: %s"
+    "nutlet.info.config.get_privilege": "As the first player to crafted spell book, you have gained the authority to modify the configuration of this world. Those who crafted spell book afterwards will not obtain this authority.",
+    "nutlet.info.config.no_privilege": "You have no authority to modify configurations of this world."
 }

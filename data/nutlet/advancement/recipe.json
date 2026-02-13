@@ -16,6 +16,7 @@
 
             ]
         },
+        "frame": "goal",
         "icon": {
         "id": "minecraft:writable_book",
         "components": {
@@ -37,5 +38,8 @@
         [
             "craft"
         ]
-    ]
+    ],
+    "rewards": {
+        "function": "nutlet:spell/first"
+    }
 }

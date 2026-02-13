@@ -6,3 +6,5 @@ data remove storage nutlet:var bright
 data remove storage nutlet:var uuid
 data remove storage nutlet:var schedule
 data remove storage nutlet:var function
+data remove storage nutlet:config list
+data remove storage nutlet:config modifyLock
