@@ -1,1 +1,1 @@
-$scoreboard players set $(objective) $(default)
+$scoreboard players set $(objective) Nutlet.Config $(default)
