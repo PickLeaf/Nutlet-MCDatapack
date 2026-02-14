@@ -34,9 +34,88 @@ tellraw @s {"text":"This is a text","color":"yellow"}
 三种效果从上至下会依次生效，其时`nutlet:var caller`的值依次为：<br>
 `hit_block`，`post_attack_attacker`，`post_attack_victim`。<br>
 在命名空间`nutlet:spell/example/`下含有一些咒法实现的示例：<br>
+`Put Helemt`将副手槽物品放到头盔槽。<br>
 `Grow Arms`使盔甲架长出手臂。<br>
 `Become Transparent`使方块上附着的物品展示框变透明。<br>
-`Call Lightning`点击避雷针生成闪电。
+`Call Lightning`点击避雷针生成闪电。<br>
+`Config`修改数据包配置，仅第一位做出咒法书的玩家拥有权限，在书的第二页写入文本搜索，输入配置项名称全称查看描述或修改，在第三页写入要修改成的值，左击方块修改。
+# 游戏内可修改的配置
+可以通过`Config`咒法修改的配置，自动注入默认值，可以通过咒法查看描述。
+## 重载`#nutlet:configs`函数标签
+你应该在`<你的存档>/datapack/<你的数据包>/data/nutlet/tags/function/configs.json`写入你的函数，类似这样：
+```json
+{
+    "replace": false,
+    "values": [
+        "example:register_configs"
+    ]
+}
+```
+nutlet会在进入存档时调用`example:register_configs`函数，你可以注册配置项类似这样：
+```mcfunction
+data modify storage nutlet:config list append value \
+    {description:"Whether to print version info of Nutlet when login the world. Acceptable Vales: [1b, 0b]",\
+    name:"Nutlet:Print Version",  storage_path:"nutlet:config showVersion", default:"1b", type:"storage"}
+data modify storage nutlet:config list append value \
+    {description:"How many game ticks Rock Gernerator produce one item. Range: [1 ~ 2147483647]",\
+    name:"Rock Gen:Work Interval", objective:"$rk_gen.work_interval", default:8, type:"scoreboard"}
+```
+`description`为配置项描述(不支持转义)。<br>
+`name`为配置项名称(不支持转义)，需要一字不漏的输入在咒法书第二页才能修改。不能和其他数据包注册的重复,格式通常应为`<数据包名称>:<配置项>`，以此规避重复名称，采用首字母大写，单词间以空格分隔的命名方法。<br>
+`type`有两种，`scoreboard`和`storage`。<br>
+前者为计分板，需要有`objective`标签作为计分板实体名称，以上注册示例可以通过`scoreboard players get $rk_gen.work_interval Nutlet.Config`获得值。objective格式通常应为`$<数据包命名空间ID>.<配置项>`，采用全小写，单词间以下划线`_`连接，不能含有空格。<br>
+`storage`为命令存储，需要`storage_path`标签，会被函数宏这样使用：`$data modify storage $(storage_path) set value $(default)`。你需要填入命令存储ID和NBT标签键名，二者以空格隔开。<br>
+`default`配置的默认值，会在配置没有值时注入。`scoreboard`类型填为整数，`storage`类型无论时何种数据都需要填字符串，原因见上一行的函数宏命令(因为会被函数宏解析一次)。<br>
+## nutlet:get_version
+需要传入函数宏参数，你可以这样调用此函数，来将Nutlet数据包版本注入到命令存储`example:print nutlet`里：
+```mcfunction
+# 先移除数据
+data remove storage example:print nutlet
+# 如果Nutlet安装了，'example:print nutlet"应该会被填入数据
+function nutlet:get_version {storage:"example:print",path:"nutlet"}
+```
+`example:print nutlet`里会有数据包版本，如果你安装了Nutlet数据包并启用的话，为一个列表形如`[I;1,1,1]`。你可以用`execute if data storage example:print nutlet`检查是否有数据填入来判断是否安装了Nutlet数据包，没有可以选择自己注入配置的默认值。
+你可以编写谓词来检查数据包是否为需求的版本，并在聊天栏打印错误信息：
+```json
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+        {
+            "condition": "minecraft:value_check",
+            "value": {
+                "type": "minecraft:storage",
+                "storage": "example:print",
+                "path": "nutlet[0]"
+            },
+            "range": {
+                "min": 1
+            }
+        },
+        {
+            "condition": "minecraft:value_check",
+            "value": {
+                "type": "minecraft:storage",
+                "storage": "example:print",
+                "path": "nutlet[1]"
+            },
+            "range": {
+                "min": 1
+            }
+        },
+        {
+            "condition": "minecraft:value_check",
+            "value": {
+                "type": "minecraft:storage",
+                "storage": "example:print",
+                "path": "nutlet[2]"
+            },
+            "range": {
+                "min": 0
+            }
+        }
+    ]
+}
+```
 # 用例
 可供调用的函数一般在命名空间`Nutlet:-m/`下。<br>
 ## nutlet:-m/hex_uuid
