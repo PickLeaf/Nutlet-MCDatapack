@@ -1,3 +1,5 @@
+advancement grant @s only nutlet:put_helmet
+
 execute unless data storage nutlet:var {caller:"hit_block"} \
     run return fail
 execute unless items entity @s weapon.offhand * \
@@ -5,13 +7,13 @@ execute unless items entity @s weapon.offhand * \
         title @s actionbar \
             {"translate":"nutlet.info.put_helmet_fail_1",\
             "bold":true, "color": "red", \
-            "fallback":"You need to carry an item in your offhand slot."}
+            "fallback":"You need to carry an item in your offhand slot"}
 execute if items entity @s armor.head * \
     run return run \
         title @s actionbar \
             {"translate":"nutlet.info.put_helmet_fail_2",\
             "bold":true, "color": "red", \
-            "fallback":"You're wearing a helmet already."}
+            "fallback":"You're wearing a helmet already"}
 
 title @s actionbar \
     {"translate":"nutlet.info.put_helmet_suc",\

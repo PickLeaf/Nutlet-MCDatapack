@@ -4,7 +4,7 @@
         "title": "Config",
         "description": {
             "translate": "nutlet.advancement.config.description",
-            "fallback": "Page 2: Enter a configuration name to view details or modify it. Leave blank to view all configurations.\nPage 3: Enter the new value for the configuration from Page 2. Leave blank to view the default value."
+            "fallback": "Page 2: Enter a configuration name to view details or modify it. Leave blank to view all configurations\nPage 3: Enter the new value for the configuration from Page 2. Leave blank to view the default value"
         },
         "icon": {
             "id": "minecraft:redstone_torch"
@@ -13,13 +13,13 @@
         "show_toast": false
     },
     "criteria": {
-        "tick": {
-            "trigger": "minecraft:tick"
+        "impossible": {
+            "trigger": "minecraft:impossible"
         }
     },
     "requirements": [
         [
-            "tick"
+            "impossible"
         ]
     ]
 }

@@ -4,7 +4,7 @@
         "title": "Put Helmet",
         "description": {
             "translate": "nutlet.advancement.put_helmet.description",
-            "fallback": "Write the text \"Put Helmet\" on the first page of the spell book. Hold the book and prees %s key to a block to wear item on your offhand to your head.",
+            "fallback": "Write the text \"Put Helmet\" on the first page of the spell book. Hold the book and prees %s key to a block to wear item on your offhand to your head",
             "with": [
                 {"translate": "key.attack"}
             ]
@@ -16,13 +16,13 @@
         "show_toast": false
     },
     "criteria": {
-        "tick": {
-            "trigger": "minecraft:tick"
+        "impossible": {
+            "trigger": "minecraft:impossible"
         }
     },
     "requirements": [
         [
-            "tick"
+            "impossible"
         ]
     ]
 }

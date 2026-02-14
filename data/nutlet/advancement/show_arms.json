@@ -4,7 +4,7 @@
         "title": "Grow Arms",
         "description": {
             "translate": "nutlet.advancement.show_arms.description",
-            "fallback": "%s a %s to make it Grow Arms.",
+            "fallback": "%s a %s to make it Grow Arms",
             "with": [
                 {"translate": "key.attack"},
                 {"translate": "entity.minecraft.armor_stand"}
@@ -17,13 +17,13 @@
         "show_toast": false
     },
     "criteria": {
-        "tick": {
-            "trigger": "minecraft:tick"
+        "impossible": {
+            "trigger": "minecraft:impossible"
         }
     },
     "requirements": [
         [
-            "tick"
+            "impossible"
         ]
     ]
 }

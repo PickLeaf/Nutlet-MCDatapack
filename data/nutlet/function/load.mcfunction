@@ -21,8 +21,8 @@ function #nutlet:spells
 # 不要忘了修改nutlet:get_version！！！
 # 还有pack.mcmeta！！！
 execute unless data storage nutlet:config \
-{version:"V1.1"} run return \
+{version:"V1.1.1"} run return \
     run return run \
-        function nutlet:version_changed {version:"V1.1"}
+        function nutlet:version_changed {version:"V1.1.1"}
 execute if data storage nutlet:config {showVersion:1b} \
     run function nutlet:print/info

@@ -4,7 +4,7 @@
         "title": "Become Transparent",
         "description": {
             "translate": "nutlet.advancement.transparent.description",
-            "fallback": "%s a block attached with an %s to make it Transparent.",
+            "fallback": "%s a block attached with an %s to make it Transparent",
             "with": [
                 {"translate": "key.attack"},
                 {"translate": "entity.minecraft.item_frame"}
@@ -17,13 +17,13 @@
         "show_toast": false
     },
     "criteria": {
-        "tick": {
-            "trigger": "minecraft:tick"
+        "impossible": {
+            "trigger": "minecraft:impossible"
         }
     },
     "requirements": [
         [
-            "tick"
+            "impossible"
         ]
     ]
 }

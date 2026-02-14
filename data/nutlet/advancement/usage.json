@@ -7,7 +7,7 @@
         },
         "description": {
             "translate": "nutlet.advancement.usage.description",
-            "fallback": "To cast spells, you need to write specific content on the first page of the book. Hold the book and press %s key to activate the spell that matches the written content.",
+            "fallback": "To cast spells, you need to write specific content on the first page of the book. Hold the book and press %s key to activate the spell that matches the written content",
             "with": [
                 {"translate": "key.attack"}
             ]
@@ -16,16 +16,17 @@
             "id": "minecraft:lead"
         },
         "announce_to_chat": false,
-        "show_toast": false
+        "show_toast": false,
+        "hidden": true
     },
     "criteria": {
-        "tick": {
-            "trigger": "minecraft:tick"
+        "impossible": {
+            "trigger": "minecraft:impossible"
         }
     },
     "requirements": [
         [
-            "tick"
+            "impossible"
         ]
     ]
 }

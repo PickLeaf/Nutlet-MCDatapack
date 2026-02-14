@@ -13,16 +13,17 @@
             "id": "minecraft:light"
         },
         "announce_to_chat": false,
-        "show_toast": false
+        "show_toast": false,
+        "hidden": true
     },
     "criteria": {
-        "tick": {
-            "trigger": "minecraft:tick"
+        "impossible": {
+            "trigger": "minecraft:impossible"
         }
     },
     "requirements": [
         [
-            "tick"
+            "impossible"
         ]
     ]
 }

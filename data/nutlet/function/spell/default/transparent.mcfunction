@@ -1,3 +1,5 @@
+advancement grant @s only nutlet:transparent
+
 execute unless data storage nutlet:var {caller:"hit_block"} \
     run return fail
 execute unless entity \

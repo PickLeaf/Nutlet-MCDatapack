@@ -1,3 +1,5 @@
+advancement grant @s only nutlet:config
+
 execute unless data storage nutlet:config firstCraftedFlag \
     run return run \
         function nutlet:spell/first

@@ -1,3 +1,5 @@
+advancement grant @s only nutlet:show_arms
+
 execute if data storage nutlet:var {caller:"post_attack_attacker"} \
     run tag @s add nutlet.speller
 execute unless data storage nutlet:var {caller:"post_attack_victim"} \
