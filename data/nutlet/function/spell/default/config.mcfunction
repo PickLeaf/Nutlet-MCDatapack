@@ -1,4 +1,4 @@
-execute unless data storage nutlet:config modifyLock \
+execute unless data storage nutlet:config firstCraftedFlag \
     run return run \
         function nutlet:spell/first
 

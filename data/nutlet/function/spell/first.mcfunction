@@ -1,8 +1,8 @@
-execute if data storage nutlet:config modifyLock \
+execute if data storage nutlet:config firstCraftedFlag \
     run return fail
-data modify storage nutlet:config modifyLock set value 1b
 tag @s add nutlet.config_privilege
 playsound entity.player.levelup
+data modify storage nutlet:config firstCraftedFlag set value 1b
 title @s title {"text": "! ! !","color": "green"}
 tellraw @s \
     {"translate":"nutlet.info.config.get_privilege",\

@@ -18,8 +18,8 @@ function nutlet:spell/default/register
 function #nutlet:spells
 
 # inject version, print info of datapack
-data modify storage nutlet:config version_int set value \
-    [I;1,1,0]
+# 不要忘了修改nutlet:get_version！！！
+# 还有pack.mcmeta！！！
 execute unless data storage nutlet:config \
 {version:"V1.1"} run return \
     run return run \
