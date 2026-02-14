@@ -20,3 +20,5 @@ execute if entity @s[x_rotation=-45..45, y_rotation=-180..-135] \
 
 function nutlet:facing/get_facing
 function nutlet:facing/get_orientation
+
+kill @s
