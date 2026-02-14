@@ -6,7 +6,7 @@
     "nutlet.enchantment.spellcasting": "施法",
     "nutlet.advancement.root.description": "请先安装\"更好的进度\"模组以改善进度UI",
     "nutlet.advancement.recipe.title": "别敲空格！",
-    "nutlet.advancement.recipe.description": "在%s中使用%s、%s、%s合成",
+    "nutlet.advancement.recipe.description": "使用%s、%s、%s在%s中合成",
     "nutlet.advancement.usage.title": "咒法书有什么用？",
     "nutlet.advancement.usage.description": "要施展咒法，你需要在书的第一页书写特定内容。握住书本并按下%s键，即可激活与书写内容相符的咒法",
     "nutlet.advancement.spells.title": "所有咒法",
