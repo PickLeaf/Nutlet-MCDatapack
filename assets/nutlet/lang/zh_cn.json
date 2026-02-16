@@ -28,9 +28,11 @@
     "nutlet.info.put_helmet_suc": "着我头盔！",
     "nutlet.info.config.current_value": "当前值: ",
     "nutlet.info.config.default_value": "默认值: ",
+    "nutlet.info.config.acceptable_value": "可接受的值：",
+    "nutlet.info.config.value_range": "值范围：",
     "nutlet.info.config.print": "在此存档中搜索到的配置：",
     "nutlet.info.config.success": "配置%s现在已设置为：%s",
-    "nutlet.info.config.wrong_set": "修改配置失败，请检查值的格式是否正确",
+    "nutlet.info.config.wrong_set": "修改配置失败，请检查值的格式是否正确或是否可接受",
     "nutlet.info.config.get_privilege": "作为首位合成出咒法书的玩家，你获得了修改这个世界配置的权限。后续合成出咒法书的人无法获得此权限",
     "nutlet.info.config.no_privilege": "你无权修改此世界的配置"
 }

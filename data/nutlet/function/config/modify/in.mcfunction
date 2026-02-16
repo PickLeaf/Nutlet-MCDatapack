@@ -1,5 +1,8 @@
 function nutlet:config/modify/storage \
     with storage nutlet:var config.result
+execute unless data storage nutlet:var config.result.range \
+    run data modify storage nutlet:var config.result.range \
+        set value "-2147483648..2147483647"
 function nutlet:config/modify/scoreboard \
     with storage nutlet:var config.result
 

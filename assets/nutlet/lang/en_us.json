@@ -28,9 +28,11 @@
     "nutlet.info.put_helmet_suc": "Put my helmet on!",
     "nutlet.info.config.current_value": "Current Value: ",
     "nutlet.info.config.default_value": "Default Value: ",
+    "nutlet.info.config.acceptable_value": "Acceptable Value: ",
+    "nutlet.info.config.value_range": "Value Range: ",
     "nutlet.info.config.print": "Configurations found in this world:",
     "nutlet.info.config.success": "Config %s is now set to: %s",
-    "nutlet.info.config.wrong_set": "Failed to modify the config. Please check if the value format is correct",
+    "nutlet.info.config.wrong_set": "Failed to modify the config. Please check if the value is correct format or acceptable",
     "nutlet.info.config.get_privilege": "As the first player to crafted spell book, you have gained the authority to modify the configuration of this world. Those who crafted spell book afterwards will not obtain this authority",
     "nutlet.info.config.no_privilege": "You have no authority to modify configurations of this world"
 }
