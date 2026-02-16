@@ -1,6 +1,4 @@
-data modify storage nutlet:var text.str \
-    set value '{"text": "!","color": "yellow"}'
-data modify storage nutlet:var text.nbt \
+data modify storage nutlet:var text.text \
     set value '{"text": "!","color": "yellow"}'
 data modify storage nutlet:var schematic.dimension \
     set from entity @s Dimension

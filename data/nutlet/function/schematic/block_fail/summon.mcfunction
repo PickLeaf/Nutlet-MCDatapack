@@ -6,9 +6,9 @@ data merge entity @s {\
     billboard: "vertical",\
     transformation:{scale: [2f,2f,2f]}}
 data modify entity @s text \
-    set from storage nutlet:var text.str
-data modify entity @s text \
-    set from storage nutlet:var text.nbt
+    set from storage nutlet:var text.text
+function nutlet:schematic/25w02a_p \
+    with storage nutlet:var text
 data modify storage nutlet:var uuid.array \
     set from entity @s UUID
 function nutlet:-m/hex_uuid
