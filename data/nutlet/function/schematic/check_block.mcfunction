@@ -1,3 +1,5 @@
+execute if data storage nutlet:var schematic{tick:0} \
+    run return fail
 data modify storage nutlet:var to_prop.prop \
     set value ''
 execute if data storage nutlet:var schematic{hasProp:1b} \

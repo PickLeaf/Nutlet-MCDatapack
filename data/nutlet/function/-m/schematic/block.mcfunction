@@ -16,7 +16,7 @@ $execute if predicate nutlet:$(hasProp) \
     run data modify storage nutlet:var schematic.hasProp set value 1b
 
 # return if block exists
-execute unless function nutlet:schematic/check_block \
+execute if function nutlet:schematic/check_block \
     run return run \
         data remove storage nutlet:var to_prop
 data remove storage nutlet:var to_prop
