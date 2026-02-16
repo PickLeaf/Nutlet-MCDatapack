@@ -54,17 +54,19 @@ tellraw @s {"text":"This is a text","color":"yellow"}
 nutlet会在进入存档时调用`example:register_configs`函数，你可以注册配置项类似这样：
 ```mcfunction
 data modify storage nutlet:config list append value \
-    {description:"Whether to print version info of Nutlet when login the world. Acceptable Vales: [1b, 0b]",\
-    name:"Nutlet:Print Version",  storage_path:"nutlet:config showVersion", default:"1b", type:"storage"}
+    {description:"Whether to print version info of Nutlet when login the world.",\
+    name:"Nutlet:Print Version",  storage_path:"nutlet:config showVersion", acceptable:[1b, 0b],\
+    default:"1b", type:"storage"}
 data modify storage nutlet:config list append value \
-    {description:"How many game ticks Rock Gernerator produce one item. Range: [1 ~ 2147483647]",\
-    name:"Rock Gen:Work Interval", objective:"$rk_gen.work_interval", default:8, type:"scoreboard"}
+    {description:"How many game ticks Rock Gernerator produce one item.",\
+    name:"Rock Gen:Work Interval", objective:"$rk_gen.work_interval", range:"1..2147483647",\
+    default:8, type:"scoreboard"}
 ```
 `description`为配置项描述(不支持转义)。<br>
 `name`为配置项名称(不支持转义)，需要一字不漏的输入在咒法书第二页才能修改。不能和其他数据包注册的重复,格式通常应为`<数据包名称>:<配置项>`，以此规避重复名称，采用首字母大写，单词间以空格分隔的命名方法。<br>
 `type`有两种，`scoreboard`和`storage`。<br>
-前者为计分板，需要有`objective`标签作为计分板实体名称，以上注册示例可以通过`scoreboard players get $rk_gen.work_interval Nutlet.Config`获得值。objective格式通常应为`$<数据包命名空间ID>.<配置项>`，采用全小写，单词间以下划线`_`连接，不能含有空格。<br>
-`storage`为命令存储，需要`storage_path`标签，会被函数宏这样使用：`$data modify storage $(storage_path) set value $(default)`。你需要填入命令存储ID和NBT标签键名，二者以空格隔开。<br>
+前者为计分板，需要有`objective`标签作为计分板实体名称，以上注册示例可以通过`scoreboard players get $rk_gen.work_interval Nutlet.Config`获得值。objective格式通常应为`$<数据包命名空间ID>.<配置项>`，不能含有空格。`range`为可选项，设定可接受的值的范围，会被函数宏这样使用：`$execute unless score A Nutlet.Clac matches $(range)`，不指定将不会进行范围检查。<br>
+`storage`为命令存储，需要`storage_path`标签，会被函数宏这样使用：`$data modify storage $(storage_path) set value $(default)`。你需要填入命令存储ID和NBT标签键名，二者以空格隔开。`acceptable`为可选项，应为一个列表，只有列表中的值能被玩家通过咒法书写入配置，留空将不进行检查。<br>
 `default`配置的默认值，会在配置没有值时注入。`scoreboard`类型填为整数，`storage`类型无论时何种数据都需要填字符串，原因见上一行的函数宏命令(因为会被函数宏解析一次)。<br>
 ## nutlet:get_version
 需要传入函数宏参数，你可以这样调用此函数，来将Nutlet数据包版本注入到命令存储`example:print nutlet`里：
@@ -179,11 +181,12 @@ execute positioned ~ ~-1 ~ run function nutlet:-m/facing/block_axis_align {handl
 与`nutlet:-m/facing/block_axis_align`相同，但使用`nutlet:-m/facing/entity`修正执行朝向。
 ## nutlet:-m/schematic/block
 ```mcfunction
+# "tick"设为0将永远不会消失
 data modify storage nutlet:var schematic set value {tick:100, transformation:{scale:[0.3f, 0.3f, 0.3f], translation:[-0.15f, -0.15f, -0.15f]}, id:"minecraft:diamond_block"}
 # hasProp函数宏参数必须指定，只能为"false"或"true"，其他值会调用失败。
 function nutlet:-m/schematic/block {hasProp:"false"}
 ```
-会在执行位置summon一个方块展示实体(为钻石块)，并在100tick后消失，`transformation`标签会应用到展示实体的`transformation`标签。定时消失的功能由`nutlet:-m/schedule`实现。执行实体推荐为玩家，这会使得清除展示实体时自动`/forceload`强加载(`/execute if loaded`条件通过时)其所在区块，如果不是玩家可能会因为展示实体所在的区块被卸载而无法被清除(这种情况退出存档重进即可)。
+会在执行位置summon一个方块展示实体(为钻石块)，并在100tick后消失，`transformation`标签会应用到展示实体的`transformation`标签。定时消失的功能由`nutlet:-m/schedule`实现。执行实体推荐为玩家，这会使得清除展示实体时自动`/forceload`强加载(`/execute unless loaded`条件通过时)其所在区块，如果不是玩家可能会因为展示实体所在的区块被卸载而无法被清除(这种情况退出存档重进即可)。
 ```mcfunction
 # 使用"prop"指定方块属性，会被应用到方块展示实体的"block_state.Properties"标签
 # keepData:1b表示指定保留"nutlet:var schematic"数据
@@ -196,7 +199,8 @@ execute positioned ~ ~1 ~ run function nutlet:-m/schematic/block {hasProp:"true"
 # 如果使用"keepData:1b"指定保留"nutlet:var schematic"数据，则需要调用者手动清除。
 data remove storage nutlet:var schematic
 ```
-会在执行位置summon两个活塞，一个朝上一个朝下，形成两面夹击之势。
+会在执行位置summon两个活塞，一个朝上一个朝下，形成两面夹击之势。<br>
+函数会检查执行位置是否为正确的方块和正确的方块状态，如果摆放错误会替换为文本为惊叹号`!`的文本展示实体(可透过方块看到)，方块错误时文本为红色，方块状态错误时为黄色。如果tick标签为0，则不进行检查，会直接显示。
 ## nutlet:-m/schematic/item
 与`nutlet:-m/schematic/block`相同，但summon的是物品展示实体，并会将展示实体的`Rotation`修改为执行旋转角度。
 ```mcfunction
