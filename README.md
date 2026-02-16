@@ -186,7 +186,7 @@ data modify storage nutlet:var schematic set value {tick:100, transformation:{sc
 # hasProp函数宏参数必须指定，只能为"false"或"true"，其他值会调用失败。
 function nutlet:-m/schematic/block {hasProp:"false"}
 ```
-会在执行位置summon一个方块展示实体(为钻石块)，并在100tick后消失，`transformation`标签会应用到展示实体的`transformation`标签。定时消失的功能由`nutlet:-m/schedule`实现。执行实体推荐为玩家，这会使得清除展示实体时自动`/forceload`强加载(`/execute if loaded`条件通过时)其所在区块，如果不是玩家可能会因为展示实体所在的区块被卸载而无法被清除(这种情况退出存档重进即可)。
+会在执行位置summon一个方块展示实体(为钻石块)，并在100tick后消失，`transformation`标签会应用到展示实体的`transformation`标签。定时消失的功能由`nutlet:-m/schedule`实现。执行实体推荐为玩家，这会使得清除展示实体时自动`/forceload`强加载(`/execute unless loaded`条件通过时)其所在区块，如果不是玩家可能会因为展示实体所在的区块被卸载而无法被清除(这种情况退出存档重进即可)。
 ```mcfunction
 # 使用"prop"指定方块属性，会被应用到方块展示实体的"block_state.Properties"标签
 # keepData:1b表示指定保留"nutlet:var schematic"数据
