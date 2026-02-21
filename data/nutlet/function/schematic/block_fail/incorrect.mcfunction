@@ -3,7 +3,8 @@ data modify storage nutlet:var text.text \
 data modify storage nutlet:var schematic.dimension \
     set from entity @s Dimension
 
-execute summon minecraft:text_display \
+execute positioned ~ ~-0.25 ~ \
+    summon minecraft:text_display \
     run function nutlet:schematic/block_fail/summon
 
 data remove storage nutlet:var schematic.dimension
