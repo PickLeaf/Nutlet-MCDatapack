@@ -1,4 +1,7 @@
 execute unless entity @s[tag=nutlet.first_tick] \
     run return run tag @s add nutlet.first_tick
-kill @e[tag=nutlet.temp_display,distance=0..0.001]
+execute on passengers run \
+    function nutlet:handler/strict_kill/kill \
+    with entity @s data
+execute on passengers run kill @s
 kill @s

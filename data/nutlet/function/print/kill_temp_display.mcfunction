@@ -1,0 +1,1 @@
+kill @e[tag=nutlet.temp_display]
