@@ -5,7 +5,7 @@
 # --nutlet:var schematic.transformation[float] : The rendering transformation applied to model after normal entity orientation https://minecraft.wiki/w/Display https://zh.minecraft.wiki/w/展示实体
 # --nutlet:var schematic.bright[int] : brightness of the item display, -1 for auto
 # --nutlet:var schematic.mergeData[compound] (optional): the data will "/data merge" to text display entity
-# --nutlet:var schematic.keepData[enum{1b,*}] (optional): doesn't delete data nutlet:var item when function done
+# --nutlet:var schematic.keepData[enum{1b,*}] (optional): doesn't delete data nutlet:var schematic when function done
 #
 # return:
 # --nutlet:var schematic.uuid[string] : hex format of summoned item display entity UUID

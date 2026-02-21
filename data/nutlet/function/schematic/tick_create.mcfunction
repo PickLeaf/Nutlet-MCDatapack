@@ -7,4 +7,6 @@ item modify entity @s armor.head {function:"minecraft:set_enchantments",enchantm
 tag @s add nutlet.tick
 
 $data modify entity @s CustomName set value '"$(handler)"'
-$function $(callback)
+execute if data storage nutlet:var schematic.callback \
+    run function nutlet:schematic/tick_callback \
+        with storage nutlet:var schematic
