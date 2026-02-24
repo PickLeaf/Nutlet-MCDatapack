@@ -33,7 +33,6 @@ execute if data storage nutlet:var schematic{autoBright:1b} \
 
 data remove storage nutlet:var schematic.hasComponent
 data remove storage nutlet:var schematic.autoBright
-data remove storage nutlet:var schematic.dimension
 
 # clean up unless keepData is set
 execute if data storage nutlet:var schematic{keepData:1b} \
