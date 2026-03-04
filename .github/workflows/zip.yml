@@ -19,7 +19,7 @@ jobs:
       with:
         type: 'zip'
         filename: 'Nutlet_${{ inputs.version }}.zip'
-        exclusions: '*.git* /*node_modules/* .editorconfig'
+        exclusions: '*.git* /*node_modules/* .editorconfig spyglass.json'
 
     - name: Release
       uses: softprops/action-gh-release@v2
