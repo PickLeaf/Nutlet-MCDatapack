@@ -1,4 +1,7 @@
 # argument:
+# --Command Context : the executor, need a player.
+# --nutlet:var schematic.dimension[string] (optional) \
+    : give by hand when the executor isn't a player. other wise, the display entity will NEVER DISAPPEAER
 # --nutlet:var schematic.id[string] : a namespace id of block
 # --nutlet:var schematic.tick[int] : ticks that the phantom block of schematic will continue existing, 0 for infinite
 # --nutlet:var schematic.transformation[float] : The rendering transformation applied to model after normal entity orientation https://minecraft.wiki/w/Display https://zh.minecraft.wiki/w/展示实体

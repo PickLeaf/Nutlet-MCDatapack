@@ -1,4 +1,7 @@
 # argument:
+# --Command Context : the executor, need a player.
+# --nutlet:var schematic.dimension[string] (optional) \
+    : give by hand when the executor isn't a player. other wise, the display entity will NEVER DISAPPEAER
 # --Command Context : the execute rotation
 # --nutlet:var schematic.id[string] : a namespace id of item
 # --nutlet:var schematic.tick[int] : ticks that the phantom item of schematic will continue existing, 0 for infinite
