@@ -14,7 +14,7 @@
         "announce_to_chat": false,
         "show_toast": false,
         "frame": "challenge",
-        "background": "minecraft:textures/block/smooth_stone.png"
+        "background": "minecraft:block/smooth_stone"
     },
     "criteria": {
         "tick": {

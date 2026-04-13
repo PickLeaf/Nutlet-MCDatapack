@@ -1,24 +1,22 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        {
-            "item": "minecraft:book"
-        },
-        {
-            "item": "minecraft:glow_ink_sac"
-        },
-        {
-            "item": "minecraft:feather"
-        }
+        "minecraft:book",
+        "minecraft:glow_ink_sac",
+        "minecraft:feather"
     ],
     "result": {
         "id": "minecraft:writable_book",
         "components": {
+            "minecraft:item_model": "nutlet:spell_book",
+            "enchantment_glint_override": false,
             "minecraft:enchantments": {
                 "nutlet:spellcasting": 1
             },
-            "minecraft:item_name": 
-                "{\"translate\":\"nutlet.item.spell_book.name\",\"fallback\":\"Spell Book\"}"
+            "minecraft:item_name": {
+                "translate": "nutlet.item.spell_book.name",
+                "fallback": "Spell Book"
+            }
         }
     }
 }

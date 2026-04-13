@@ -1,45 +1,29 @@
 {
-	"pack": {
-		"pack_format": 48,
-		"supported_formats": [34,94],
-		"min_format": 34,
-		"max_format": 94,
-		"description": [
-			{
-				"text": "Nutlet V1.2.1[MC1.21.x]\n"
-			},
-			{
-				"text": "By 刘拾叶 | PickLeaf",
-				"color": "gold"
-			}
-		]
-	},
-	"overlays": {
-		"entries": [
-			{
-				"formats": [49, 9999],
-				"min_format": 49,
-				"max_format": 9999,
-				"directory": "24w33a_p"
-			},
-			{
-				"formats": [62, 9999],
-				"min_format": 62,
-				"max_format": 9999,
-				"directory": "25w02a_p"
-			},
-			{
-				"formats": [64, 9999],
-				"min_format": 64,
-				"max_format": 9999,
-				"directory": "25w04a_p"
-			},
-			{
-				"formats": [48, 94],
-				"min_format": 48,
-				"max_format": 94,
-				"directory": "print_info"
-			}
-		]
-	}
+    "pack": {
+        "min_format": [
+            84
+        ],
+        "max_format": 102,
+        "description": [
+            {
+                "text": "Nutlet V2.0[MC26.x]\n"
+            },
+            {
+                "text": "By 刘拾叶 | PickLeaf",
+                "color": "gold"
+            }
+        ]
+    },
+    "overlays": {
+        "entries": [
+            {
+                "min_format": [
+                    101,
+                    1
+                ],
+                "max_format": 102,
+                "directory": "print_info"
+            }
+        ]
+    }
 }

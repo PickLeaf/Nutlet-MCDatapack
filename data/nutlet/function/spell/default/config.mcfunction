@@ -16,7 +16,6 @@ data modify storage nutlet:var config.1 \
 execute if data storage nutlet:var config.1 \
     run return run function nutlet:config/spell_in
 
-
 function nutlet:config/print/all
 
 data remove storage nutlet:var config

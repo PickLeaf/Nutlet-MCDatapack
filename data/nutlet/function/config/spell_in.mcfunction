@@ -4,4 +4,5 @@ execute if function nutlet:config/hit/try \
 
 function nutlet:config/search/init
 function nutlet:config/print/do
+
 data remove storage nutlet:var config

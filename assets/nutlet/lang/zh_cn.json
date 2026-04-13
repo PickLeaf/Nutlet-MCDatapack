@@ -3,7 +3,7 @@
     "nutlet.link": "[链接]",
     "nutlet.load_unexpected_version": "(被加载到了非预期的版本！)",
     "nutlet.load_resourcepack": "",
-    "nutlet.enchantment.spellcasting": "施法",
+    "nutlet.enchantment.spellcasting": "%s以施法",
     "nutlet.advancement.root.description": "请先安装\"更好的进度\"模组以改善进度UI",
     "nutlet.advancement.recipe.title": "别敲空格！",
     "nutlet.advancement.recipe.description": "使用%s、%s、%s在%s中合成",

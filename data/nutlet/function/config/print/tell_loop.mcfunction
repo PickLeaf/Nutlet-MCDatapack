@@ -3,15 +3,8 @@ function nutlet:config/get_current_value_scoreboard \
 function nutlet:config/get_current_value_storage \
     with storage nutlet:var config.result
 
-tellraw @s [\
-    {"type": "nbt",\
-        "storage": "nutlet:var",\
-        "nbt": "config.result.name"},\
-    {"text": ": "},\
-    {"type": "nbt",\
-        "storage": "nutlet:var",\
-        "nbt": "config.result.curent_value",\
-        "color": "dark_green"}]
+function nutlet:config/print/to_dialog with \
+    storage nutlet:var config.result
 
 data remove storage nutlet:var config.result
 data modify storage nutlet:var config.result \

@@ -1,2 +1,2 @@
-return run function nutlet:config/hit/macro \
+return run function nutlet:config/hit/get \
     with storage nutlet:var config

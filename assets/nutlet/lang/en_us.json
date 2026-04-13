@@ -3,7 +3,7 @@
     "nutlet.link": "[Link]",
     "nutlet.load_unexpected_version": "(Be loaded to UNEXPECTED version!)",
     "nutlet.load_resourcepack": "",
-    "nutlet.enchantment.spellcasting": "Spellcasting",
+    "nutlet.enchantment.spellcasting": "%s to Spellcasting",
     "nutlet.advancement.root.description": "Please install \"Better Advancements\" mod first to improve the advancement UI",
     "nutlet.advancement.recipe.title": "Don't Type Space!",
     "nutlet.advancement.recipe.description": "Use %s, %s, %s craft on %s",

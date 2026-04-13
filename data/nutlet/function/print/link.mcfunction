@@ -3,8 +3,8 @@ data modify storage nutlet:print cmd.link \
     "fallback": "[Link]",\
     "underlined": true,\
     "color": "aqua",\
-    "hoverEvent": {"action": "show_text",\
-    "contents": {"text": "https://github.com/PickLeaf/Nutlet-MCDatapack"}},\
-    "clickEvent": {"action": "open_url",\
-    "value": "https://github.com/PickLeaf/Nutlet-MCDatapack"}},\
+    "hover_event": {"action": "show_text",\
+    "value": {"text": "https://github.com/PickLeaf/Nutlet-MCDatapack"}},\
+    "click_event": {"action": "open_url",\
+    "url": "https://github.com/PickLeaf/Nutlet-MCDatapack"}},\
     {"text": " "}'
