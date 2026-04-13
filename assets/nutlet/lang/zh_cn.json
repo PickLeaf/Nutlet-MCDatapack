@@ -34,5 +34,11 @@
     "nutlet.info.config.success": "配置%s现在已设置为：%s",
     "nutlet.info.config.wrong_set": "修改配置失败，请检查值的格式是否正确或是否可接受",
     "nutlet.info.config.get_privilege": "作为首位合成出咒法书的玩家，你获得了修改这个世界配置的权限。后续合成出咒法书的人无法获得此权限",
-    "nutlet.info.config.no_privilege": "你无权修改此世界的配置"
+    "nutlet.info.config.no_privilege": "你无权修改此世界的配置",
+    "nutlet.advancement.UUID.description": "攻击实体以获取其UUID",
+    "nutlet.info.UUID_get_suc": "你攻击的实体的UUID已被写入书中！",
+    "nutlet.advancement.leash.description": "在书的第二页写入目标实体UUID，被你攻击的实体将会被拴引指目标实体，被你攻击的实体需被拴绳牵引中",
+    "nutlet.info.leash_suc": "你攻击的实体已被拴到目标实体",
+    "nutlet.info.leash_fail": "实体拴引失败"
+
 }

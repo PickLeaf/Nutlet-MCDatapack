@@ -1,0 +1,25 @@
+{
+    "parent": "nutlet:config",
+    "display": {
+        "title": "UUID",
+        "description": {
+            "translate": "nutlet.advancement.UUID.description",
+            "fallback": "Attack Entity to get its UUID"
+        },
+        "icon": {
+            "id": "minecraft:dragon_egg"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ]
+}

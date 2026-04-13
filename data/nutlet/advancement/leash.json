@@ -1,0 +1,25 @@
+{
+    "parent": "nutlet:uuid",
+    "display": {
+        "title": "Leash",
+        "description": {
+            "translate": "nutlet.advancement.leash.description",
+            "fallback": "Write the UUID of the target entity on the second page of the book, and the entity you attack will be leashed to the target entity, and the entity you attack needs to be leashed and towed"
+        },
+        "icon": {
+            "id": "minecraft:lead"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ]
+}

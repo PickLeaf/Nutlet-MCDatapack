@@ -8,3 +8,7 @@ data modify storage nutlet:spell list append value \
     {spell:"Call Lightning", function:"nutlet:spell/default/call_lightning"}
 data modify storage nutlet:spell list append value \
     {spell:"Config", function:"nutlet:spell/default/config"}
+data modify storage nutlet:spell list append value \
+    {spell:"UUID", function:"nutlet:spell/default/uuid"}
+data modify storage nutlet:spell list append value \
+    {spell:"Leash", function:"nutlet:spell/default/leash"}

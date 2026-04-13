@@ -1,0 +1,1 @@
+$data modify storage nutlet:var uuid.array set value uuid("$(hex)")
