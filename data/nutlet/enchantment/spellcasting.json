@@ -1,14 +1,6 @@
 {
     "anvil_cost": 4,
-    "description": {
-        "translate": "nutlet.enchantment.spellcasting",
-        "fallback": "%s to Spellcasting",
-        "with": [
-            {
-                "translate": "key.attack"
-            }
-        ]
-    },
+    "description": "",
     "effects": {
         "minecraft:hit_block": [
             {

@@ -16,6 +16,11 @@
             "minecraft:item_name": {
                 "translate": "nutlet.item.spell_book.name",
                 "fallback": "Spell Book"
+            },
+            "minecraft:tooltip_display": {
+                "hidden_components": [
+                    "minecraft:enchantments"
+                ]
             }
         }
     }
