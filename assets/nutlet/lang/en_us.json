@@ -37,6 +37,9 @@
     "nutlet.info.config.no_privilege": "You have no authority to modify configurations of this world",
     "nutlet.advancement.UUID.description": "Attack Entity to get its UUID",
     "nutlet.info.UUID_get_suc": "The UUID of the entity you attacked has been written into the book!",
-    "nutlet.advancement.leash.description": "Write the UUID of the target entity on the second page of the book, and the entity you attack will be leashed to the target entity, and the entity you attack needs to be leashed and towed",
+    "nutlet.advancement.leash.description": "Write the UUID of the target entity on the second page of the book, and the entity you attack will be leashed to the target entity, your off-hand needs to hold the %s",
+    "nutlet.info.leash_alreadyHas": "The entity you attacked already has leashed",
+    "nutlet.info.leash_suc": "The entity you attacked has been leashed to the target entity",
+    "nutlet.info.leash_no": "You need to hold a %s in your offhand slot",
     "nutlet.info.leash_fail": "Entity leashing failed"
 }

@@ -37,8 +37,9 @@
     "nutlet.info.config.no_privilege": "你无权修改此世界的配置",
     "nutlet.advancement.UUID.description": "攻击实体以获取其UUID",
     "nutlet.info.UUID_get_suc": "你攻击的实体的UUID已被写入书中！",
-    "nutlet.advancement.leash.description": "在书的第二页写入目标实体UUID，被你攻击的实体将会被拴引指目标实体，被你攻击的实体需被拴绳牵引中",
+    "nutlet.advancement.leash.description": "在书的第二页写入目标实体UUID，被你攻击的实体将会被拴引指目标实体，你的副手需要拿着%s",
+    "nutlet.info.leash_alreadyHas": "你攻击的实体已经被栓住了",
     "nutlet.info.leash_suc": "你攻击的实体已被拴到目标实体",
-    "nutlet.info.leash_fail": "实体拴引失败"
-
+    "nutlet.info.leash_no": "你的副手槽中需要拿着一个%s",
+    "nutlet.info.leash_fail": "实体牵引失败"
 }

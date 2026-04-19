@@ -11,4 +11,4 @@ data modify storage nutlet:spell list append value \
 data modify storage nutlet:spell list append value \
     {spell:"UUID", function:"nutlet:spell/default/uuid"}
 data modify storage nutlet:spell list append value \
-    {spell:"Leash", function:"nutlet:spell/default/leash"}
+    {spell:"Leash", function:"nutlet:spell/leash/in"}

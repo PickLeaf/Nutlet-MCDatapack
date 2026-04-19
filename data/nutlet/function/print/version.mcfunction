@@ -6,4 +6,4 @@ data modify storage nutlet:print cmd.version \
     "nbt": "version",\
     "storage": "nutlet:config",\
     "interpret": true},\
-    {"text": "[MC1.21.x]"}'
+    {"text": "[MC26.x]"}'

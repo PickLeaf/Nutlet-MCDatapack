@@ -3,5 +3,5 @@ execute unless function nutlet:schematic/to_prop/replace \
         with storage nutlet:var to_prop
 
 function nutlet:schematic/to_prop/eat_one
-execute if data storage nutlet:var to_prop.char \
+execute if data storage nutlet:var to_prop.token \
     run function nutlet:schematic/to_prop/loop

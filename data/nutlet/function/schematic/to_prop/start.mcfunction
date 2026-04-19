@@ -4,13 +4,12 @@
 # return:
 # --nutlet:var to_prop.prop[string] : facing=up
 execute summon text_display \
-    run function nutlet:schematic/to_prop/to_str
-
+    run function nutlet:schematic/to_prop/to_array
 data modify storage nutlet:var to_prop.prop set value ""
 
-data modify storage nutlet:var to_prop.char \
-    set string storage nutlet:var to_prop.nbt 0 1
-execute if data storage nutlet:var to_prop.char \
+data modify storage nutlet:var to_prop.token \
+    set string storage nutlet:var to_prop.nbt[0]
+execute if data storage nutlet:var to_prop.token \
     run function nutlet:schematic/to_prop/loop
 
 data remove storage nutlet:var to_prop.temp

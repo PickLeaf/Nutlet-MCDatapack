@@ -1,5 +1,5 @@
 data modify storage nutlet:var text.text \
-    set value '{"text": "!","color": "yellow"}'
+    set value {"text": "!","color": "yellow"}
 data modify storage nutlet:var schematic.dimension \
     set from entity @s Dimension
 

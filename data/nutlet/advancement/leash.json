@@ -4,7 +4,10 @@
         "title": "Leash",
         "description": {
             "translate": "nutlet.advancement.leash.description",
-            "fallback": "Write the UUID of the target entity on the second page of the book, and the entity you attack will be leashed to the target entity, and the entity you attack needs to be leashed and towed"
+            "fallback": "Write the UUID of the target entity on the second page of the book, and the entity you attack will be leashed to the target entity, your off-hand needs to hold the %s",
+            "with": [
+                {"translate": "item.minecraft.lead"}
+            ]
         },
         "icon": {
             "id": "minecraft:lead"
