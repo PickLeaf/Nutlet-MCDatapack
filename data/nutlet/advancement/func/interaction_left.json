@@ -1,0 +1,30 @@
+{
+    "parent": "recipes/root",
+    "display": {
+        "title": "",
+        "description": "",
+        "icon": {
+            "id": "minecraft:iron_pickaxe"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "criteria": {
+        "interaction": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:interaction"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "interaction"
+        ]
+    ],
+    "rewards": {
+        "function": "nutlet:interaction/left/adv_triggered"
+    }
+}

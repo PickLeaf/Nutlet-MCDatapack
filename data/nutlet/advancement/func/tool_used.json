@@ -1,0 +1,25 @@
+{
+    "parent": "recipes/root",
+    "display": {
+        "title": "",
+        "description": "",
+        "icon": {
+            "id": "minecraft:iron_pickaxe"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "criteria": {
+        "tool_used": {
+            "trigger": "minecraft:item_durability_changed"
+        }
+    },
+    "requirements": [
+        [
+            "tool_used"
+        ]
+    ],
+    "rewards": {
+        "function": "nutlet:structure_check/adv_triggered"
+    }
+}
