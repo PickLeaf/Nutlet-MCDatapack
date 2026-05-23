@@ -234,3 +234,8 @@ say hello,world!
 scoreboard players set @s Nutlet.Clac 20
 ```
 你可以注意到发出信息的名称是`example:test`，你可以用`data modify entity @s CustomName`改变函数调用。使用`kill @s`结束。
+# 非函数接口
+## `data."nutlet:structure_check"`实体标签
+在玩家工具损坏时(破坏方块)通过此标签调用机器的结构检查函数
+`func`结构检查函数ID
+`x``y``z`运行结构检查函数的命令执行位置, 在方块正中心
