@@ -1,4 +1,3 @@
-execute summon minecraft:marker \
-    run function nutlet:handler/strict_kill/data_marker
-ride @n[tag=nutlet.temp_mark] mount @s
-tag @n[tag=nutlet.temp_mark] remove nutlet.temp_mark
+data modify entity @s data.uuid \
+    set from storage nutlet:var data.uuid
+tag @s add nutlet.temp_mark

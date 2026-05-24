@@ -1,3 +1,4 @@
+# invoke by nutlet:schedule/go
 execute if data storage nutlet:var data.uuid \
     run return run \
         function nutlet:handler/kill/macro with storage nutlet:var data

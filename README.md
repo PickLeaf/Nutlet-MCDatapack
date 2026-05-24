@@ -221,10 +221,10 @@ data modify storage nutlet:var schematic set value {tick:100, mergeData:{backgro
 execute facing ^ ^ ^-1 run function nutlet:-m/schematic/text
 ```
 summon的文本展示实体会朝向后方。你需要后退几步，可能还要破坏地板，就能看见它了。
-## nutlet:-m/schematic/tick
+## nutlet:-m/tick
 ```mcfunction
 # "handler"参数为一个函数
-function nutlet:-m/schematic/tick {handler:"example:test"}
+function nutlet:-m/tick {handler:"example:test"}
 ```
 会在执行位置生成一个盔甲架，使用自定义魔咒每tick执行`example:test`函数。使用以下函数会每秒在聊天框输出一次`hello,world!`：<br>
 `example:test`
@@ -233,4 +233,13 @@ say hello,world!
 # 使用计分板延时20tick后才会再次调用此函数
 scoreboard players set @s Nutlet.Clac 20
 ```
-你可以注意到发出信息的名称是`example:test`，你可以用`data modify entity @s CustomName`改变函数调用。使用`kill @s`结束。
+你可以用`data modify entity @s data."nutlet:tick"`改变函数调用。使用`kill @s`结束。
+# 非函数接口
+## `data."nutlet:structure_check"`实体标签
+在玩家工具损坏(破坏方块)时，查找半径10格内含有此标签的实体，通过此标签调用机器的结构检查函数
+`data."nutlet:structure_check".func`结构检查函数ID
+`data."nutlet:structure_check".x` `data."nutlet:structure_check".y` `data."nutlet:structure_check".z`运行结构检查函数的命令执行位置, 在方块正中心
+## `data."nutlet:interaction"`实体标签
+仅用于交互实体，用于在玩家左键右键交互实体时自动调用函数，执行者为交互实体
+`data."nutlet:interaction".left`玩家左键交互实体时调用的函数ID
+`data."nutlet:interaction".right`玩家右键交互实体时调用的函数ID
