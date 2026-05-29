@@ -1,1 +1,0 @@
-return run data get storage nutlet:var random.list

@@ -1,0 +1,1 @@
+return run data get storage nutlet:var list.list
