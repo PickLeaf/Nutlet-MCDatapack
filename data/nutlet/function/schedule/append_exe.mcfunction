@@ -1,1 +1,0 @@
-$schedule function nutlet:schedule/exe $(tick)t append

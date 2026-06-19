@@ -32,7 +32,7 @@
             {
                 "effect": {
                     "type": "minecraft:run_function",
-                    "function": "nutlet:spell/tick"
+                    "function": "nutlet:tick/enchant_in"
                 },
                 "requirements": {
                     "condition": "minecraft:entity_properties",

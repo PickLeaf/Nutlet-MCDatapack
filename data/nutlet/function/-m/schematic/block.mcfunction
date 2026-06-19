@@ -1,7 +1,5 @@
 # argument:
 # --Command Context : the executor, need a player.
-# --nutlet:var schematic.dimension[string] (optional) \
-    : give by hand when the executor isn't a player. other wise, the display entity will NEVER DISAPPEAER
 # --nutlet:var schematic.id[string] : a namespace id of block
 # --nutlet:var schematic.tick[int] : ticks that the phantom block of schematic will continue existing, 0 for infinite
 # --nutlet:var schematic.transformation[float] : The rendering transformation applied to model after normal entity orientation https://minecraft.wiki/w/Display https://zh.minecraft.wiki/w/展示实体
@@ -10,9 +8,8 @@
 # --nutlet:var schematic.prop[compound] (optional): block properties in json format string
 # --nutlet:var schematic.dropData[enum{1b,*}] (optional) \
     : delete data nutlet:var schematic when function done, it include nutlet:var schematic.uuid
-#
-# return:
-# --nutlet:var schematic.uuid[string] : hex format of summoned block display entity UUID
+# --nutlet:var schematic.callback[string] (optional): a function will execute when block display entity created
+# --nutlet:var schematic.alwaysShow[enum{1b,*}] (optional)
 
 # return if block exists
 execute if function nutlet:schematic/check_block \

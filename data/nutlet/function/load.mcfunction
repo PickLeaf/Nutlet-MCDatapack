@@ -3,9 +3,6 @@ scoreboard objectives add Nutlet.Config dummy
 function nutlet:util/exe {cmd:"gamerule commandBlockOutput false"}
 function nutlet:util/exe {cmd:"gamerule command_block_output false"}
 
-# kill display entities
-schedule function nutlet:print/kill_temp_display 2s
-
 # register configs
 data remove storage nutlet:config list
 function nutlet:config

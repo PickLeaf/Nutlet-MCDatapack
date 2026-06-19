@@ -16,32 +16,14 @@ tag @s add nutlet.display
 execute unless data storage nutlet:var schematic{tick:0} \
     run tag @s add nutlet.temp_display
 
-# return hex format uuid
-data modify storage nutlet:var uuid.array \
-    set from entity @s UUID
-function nutlet:-m/hex_uuid
-data modify storage nutlet:var schematic.uuid \
-    set from storage nutlet:var uuid.hex
-data remove storage nutlet:var uuid
+# execute callback function if exists
+execute if data storage nutlet:var schematic.callback \
+    run function nutlet:util/callback \
+        with storage nutlet:var schematic
 # schedule kill if tick limit is set
 execute if data storage nutlet:var schematic{tick:0} \
     run return fail
 
-data modify storage nutlet:var schedule.task.data.dimension \
-    set from storage nutlet:var schematic.dimension
-data modify storage nutlet:var schedule.task.data.x \
-    set from entity @s Pos[0]
-data modify storage nutlet:var schedule.task.data.y \
-    set from entity @s Pos[1]
-data modify storage nutlet:var schedule.task.data.z \
-    set from entity @s Pos[2]
-
-data modify storage nutlet:var schedule.task.data.uuid \
-    set from storage nutlet:var schematic.uuid
-
-data modify storage nutlet:var schedule.task.handler \
-    set value "nutlet:handler/strict_kill"
-
-data modify storage nutlet:var schedule.tick \
+data modify storage nutlet:var schedule.delay \
     set from storage nutlet:var schematic.tick
-function nutlet:-m/schedule
+function nutlet:-m/schedule/kill

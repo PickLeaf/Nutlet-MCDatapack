@@ -1,7 +1,5 @@
 # argument:
 # --Command Context : the executor, need a player.
-# --nutlet:var schematic.dimension[string] (optional) \
-    : give by hand when the executor isn't a player. other wise, the display entity will NEVER DISAPPEAER
 # --Command Context : the execute rotation
 # --nutlet:var schematic.id[string] : a namespace id of item
 # --nutlet:var schematic.tick[int] : ticks that the phantom item of schematic will continue existing, 0 for infinite
@@ -10,9 +8,7 @@
 # --nutlet:var 'hasComponent'[enum{1b,*}] : whether the item has component or not
 # --nutlet:var schematic.component[compound] (optional): item component in json format string
 # --nutlet:var schematic.dropData[enum{1b,*}] (optional): delete data nutlet:var item when function done
-#
-# return:
-# --nutlet:var item.uuid[string] : hex format of summoned item display entity UUID
+# --nutlet:var schematic.callback[string] (optional): a function will execute when item display entity created
 
 # fill in default parameters of nutlet:var schematic.transformation
 function nutlet:schematic/fill_default_trans

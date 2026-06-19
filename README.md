@@ -136,18 +136,13 @@ tp $(hex) ~ 255 ~
 ```mcfunction
 function test:test with storage nutlet:var uuid
 ```
-## nutlet:-m/schedule
-先编写以下函数文件：<br>
-`test:test.mcfunction`
+## nutlet:-m/schedule/kill
+执行以下命令：
 ```mcfunction
-tellraw @a {"storage": "nutlet:var","nbt": "data.msg"}
+data modify storage nutlet:var schedule.delay set value 20
+function nutlet:-m/schedule/kill
 ```
-然后执行以下命令：
-```mcfunction
-data modify storage nutlet:var schedule set value {tick:50,task:{handler:"test:test",data:{msg:"ooooooooh!"}}}
-function nutlet:-m/schedule
-```
-会在50游戏刻(也就是2.5秒)后执行函数：`nutlet:test` ，`data`将在函数执行时放置在`nutlet:var data`供函数使用。你将在聊天框看到"ooooooooh!"。
+执行者(通常是你)会在20tick(1秒)后被'/kill'命令清除，这里的20tick指执行者被加载并经过的时间，而不是游戏的全局时间，会受到执行者所在的区块卸载影响。
 ## nutlet:-m/brightness
 执行以下命令：
 ```mcfunction
@@ -224,7 +219,10 @@ summon的文本展示实体会朝向后方。你需要后退几步，可能还�
 ## nutlet:-m/tick
 ```mcfunction
 # "handler"参数为一个函数
-function nutlet:-m/tick {handler:"example:test"}
+data modify storage nutlet:var tick set value \
+    {handler: "example:test",\
+    callback: ""}
+# "callback"参数也为一个函数，仅会在实体被创建后执行一次
 ```
 会在执行位置生成一个盔甲架，使用自定义魔咒每tick执行`example:test`函数。使用以下函数会每秒在聊天框输出一次`hello,world!`：<br>
 `example:test`
@@ -233,7 +231,22 @@ say hello,world!
 # 使用计分板延时20tick后才会再次调用此函数
 scoreboard players set @s Nutlet.Clac 20
 ```
-你可以用`data modify entity @s data."nutlet:tick"`改变函数调用。使用`kill @s`结束。
+你可以用`data modify entity @s data."nutlet:tick"`改变函数调用。使用`kill @s`结束。<br>
+你也可以用以下单条命令创建：
+```mcfunction
+summon minecraft:armor_stand ~ ~ ~ \
+    {Marker: true,\
+    Invisible: true,\
+    data: {\
+        "nutlet:tick": "example:test"},\
+    equipment: {\
+        "feet": {\
+            id: "minecraft:glass",\
+            count: 1,\
+            components: {\
+                "minecraft:enchantments": {\
+                    "nutlet:spellcasting": 1}}}}}
+```
 # 非函数接口
 ## `data."nutlet:structure_check"`实体标签
 在玩家工具损坏(破坏方块)时，查找半径10格内含有此标签的实体，通过此标签调用机器的结构检查函数
