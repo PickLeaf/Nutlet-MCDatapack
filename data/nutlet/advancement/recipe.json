@@ -22,7 +22,9 @@
         "components": {
             "minecraft:enchantments": {
                 "nutlet:spellcasting": 1
-            }
+            },
+            "minecraft:item_model": "nutlet:spell_book",
+            "minecraft:enchantment_glint_override": false
         }
     }
     },
