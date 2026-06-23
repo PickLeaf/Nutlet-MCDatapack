@@ -1,1 +1,1 @@
-$kill @e[nbt={UUID:$(UUID)}]
+$kill @e[distance=0..32,nbt={UUID:$(UUID)}]

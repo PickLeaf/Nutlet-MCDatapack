@@ -5,7 +5,7 @@
 # --nutlet:var schematic.tick[int] : ticks that the phantom item of schematic will continue existing, 0 for infinite
 # --nutlet:var schematic.transformation[float] : The rendering transformation applied to model after normal entity orientation https://minecraft.wiki/w/Display https://zh.minecraft.wiki/w/展示实体
 # --nutlet:var schematic.bright[int] : brightness of the item display, -1 for auto
-# --nutlet:var 'hasComponent'[enum{1b,*}] : whether the item has component or not
+# --nutlet:var schematic.hasComponent[enum{1b,*}] : whether the item has component or not
 # --nutlet:var schematic.component[compound] (optional): item component in json format string
 # --nutlet:var schematic.dropData[enum{1b,*}] (optional): delete data nutlet:var item when function done
 # --nutlet:var schematic.callback[string] (optional): a function will execute when item display entity created
@@ -29,6 +29,6 @@ execute if data storage nutlet:var schematic{autoBright:1b} \
 
 data remove storage nutlet:var schematic.autoBright
 
-# clean up if keepData is set
+# clean up if dropData is set
 execute if data storage nutlet:var schematic{dropData:1b} \
     run data remove storage nutlet:var schematic

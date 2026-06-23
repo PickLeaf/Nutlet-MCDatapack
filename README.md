@@ -184,14 +184,13 @@ function nutlet:-m/schematic/block {hasProp:"false"}
 会在执行位置summon一个方块展示实体(为钻石块)，并在100tick后消失，`transformation`标签会应用到展示实体的`transformation`标签。定时消失的功能由`nutlet:-m/schedule`实现。执行实体推荐为玩家，这会使得清除展示实体时自动`/forceload`强加载(`/execute unless loaded`条件通过时)其所在区块，如果不是玩家可能会因为展示实体所在的区块被卸载而无法被清除(这种情况退出存档重进即可)。
 ```mcfunction
 # 使用"prop"指定方块属性，会被应用到方块展示实体的"block_state.Properties"标签
-# keepData:1b表示指定保留"nutlet:var schematic"数据
-data modify storage nutlet:var schematic set value {tick:100, transformation:{scale:[1f, 1f, 1f], translation:[-0.5f, -0.5f, -0.5f]}, id:"minecraft:piston", prop:{facing:"up"}, keepData:1b}
+data modify storage nutlet:var schematic set value {tick:100, transformation:{scale:[1f, 1f, 1f], translation:[-0.5f, -0.5f, -0.5f]}, id:"minecraft:piston", prop:{facing:"up"}}
 # 指定"hasProp"函数宏参数为"true"，表示应用"prop"到方块展示实体"block_state.Properties"标签
 function nutlet:-m/schematic/block {hasProp:"true"}
-# 因为"keepData:1b"保留了"nutlet:var schematic"数据，只更改"schematic.prop.facibng"来更改活塞朝向
+# 因为默认保留了"nutlet:var schematic"数据，只更改"schematic.prop.facibng"来更改活塞朝向
 data modify storage nutlet:var schematic.prop.facibng set value "down"
 execute positioned ~ ~1 ~ run function nutlet:-m/schematic/block {hasProp:"true"}
-# 如果使用"keepData:1b"指定保留"nutlet:var schematic"数据，则需要调用者手动清除。
+# "nutlet:var schematic"数据需要调用者手动清除。
 data remove storage nutlet:var schematic
 ```
 会在执行位置summon两个活塞，一个朝上一个朝下，形成两面夹击之势。<br>
@@ -223,6 +222,7 @@ data modify storage nutlet:var tick set value \
     {handler: "example:test",\
     callback: ""}
 # "callback"参数也为一个函数，仅会在实体被创建后执行一次
+function nutlet:-m/tick
 ```
 会在执行位置生成一个盔甲架，使用自定义魔咒每tick执行`example:test`函数。使用以下函数会每秒在聊天框输出一次`hello,world!`：<br>
 `example:test`

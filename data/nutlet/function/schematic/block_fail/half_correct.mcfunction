@@ -8,6 +8,6 @@ execute positioned ~ ~-0.25 ~ \
     run function nutlet:schematic/block_fail/summon
 
 data remove storage nutlet:var text
-execute unless data storage nutlet:var schematic{keepData:1b} \
+execute if data storage nutlet:var schematic{dropData:1b} \
     run data remove storage nutlet:var schematic
 return 1

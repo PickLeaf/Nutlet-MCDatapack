@@ -32,6 +32,6 @@ execute if data storage nutlet:var schematic{autoBright:1b} \
 
 data remove storage nutlet:var schematic.autoBright
 
-# clean up if keepData is set
+# clean up if dropData is set
 execute if data storage nutlet:var schematic{dropData:1b} \
     run data remove storage nutlet:var schematic

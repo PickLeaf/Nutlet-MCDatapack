@@ -4,7 +4,7 @@
         {x: 1, foo: {P: 1.7f}}
 #
 # return:
-# --nutlet:var list.list[] \
+# --nutlet:var list.list[array] \
     : every element contain key and value of given compound tag \
         [{key: "x", value: 1}, {key: "foo", value: {P: 1.7f}}]
 

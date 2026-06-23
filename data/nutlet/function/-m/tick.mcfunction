@@ -5,6 +5,6 @@
 
 execute summon minecraft:armor_stand \
     run function nutlet:tick/create
-execute if data storage nutlet:var schematic{keepData:1b} \
+execute if data storage nutlet:var tick{keepData:1b} \
     run return 1
-data remove storage nutlet:var schematic
+data remove storage nutlet:var tick
