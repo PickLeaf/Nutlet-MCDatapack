@@ -1,0 +1,24 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:white_harness"
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:equippable": {
+                "slot": "body",
+                "equip_sound": {
+                    "sound_id": "",
+                    "range": 0
+                }
+            }
+        }
+    },
+    {
+        "function": "minecraft:set_enchantments",
+        "enchantments": {
+            "minecraft:vanishing_curse": 1
+        }
+    }
+]
