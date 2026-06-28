@@ -6,7 +6,7 @@
         "max_format": 107,
         "description": [
             {
-                "text": "Nutlet V2.1[MC26.x]\n"
+                "text": "Nutlet V2.1.1[MC26.x]\n"
             },
             {
                 "text": "By 刘拾叶 | PickLeaf",
@@ -18,19 +18,19 @@
         "entries": [
             {
                 "min_format": [
+                    102,
+                    0
+                ],
+                "max_format": 99999,
+                "directory": "26.2-snapshot-3"
+            },
+            {
+                "min_format": [
                     101,
                     1
                 ],
                 "max_format": 107,
                 "directory": "print_info"
-            },
-            {
-                "min_format": [
-                    102,
-                    0
-                ],
-                "max_format": 99999,
-                "directory": "102p"
             }
         ]
     }
