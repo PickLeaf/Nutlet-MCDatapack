@@ -1,0 +1,36 @@
+enum(byte) Bool {
+    TRUE = 1b,
+    FALSE = 0b,
+}
+
+type HexUUID = (
+    #[match_regex="[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}"] string |
+)
+
+type PlayerName = (
+    #[match_regex="[a-z0-9_]{3,16}"] string |
+)
+
+enum(string) Facing {
+    UP = "up",
+    DOWN = "down",
+    EAST = "east",
+    WEST = "west",
+    SOUTH = "south",
+    NORTH = "north",
+}
+
+enum(string) Orientation {
+    UP_EAST = "up_east",
+    UP_WEST = "up_west",
+    UP_SOUTH = "up_south",
+    UP_NORTH = "up_north",
+    DOWN_EAST = "down_east",
+    DOWN_WEST = "down_west",
+    DOWN_SOUTH = "down_south",
+    DOWN_NORTH = "down_north",
+    SOUTH_UP = "south_up",
+    NORTH_UP = "north_up",
+    WEST_UP = "west_up",
+    EAST_UP = "east_up",
+}

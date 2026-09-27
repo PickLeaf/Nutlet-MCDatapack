@@ -1,0 +1,94 @@
+dispatch minecraft:storage["nutlet:var"] to Var
+
+use ::java::util::text::Text
+use ::java::world::entity::display::Rotation
+use ::java::world::item::ItemBase
+use ::nutlet::preliminary::Bool
+use ::nutlet::preliminary::Facing
+use ::nutlet::preliminary::Orientation
+
+struct Var {
+    axis_align?: struct {
+        handler: #[id="function"] string,
+    },
+    facing?: struct {
+        success?: Bool,
+        x_rotation?: int @ -90..90,
+        y_rotation?: int @ -90..90,
+        facing?: Facing,
+        orientation?: Orientation,
+    },
+    lis?: struct {
+        compound?: struct {},
+        list?: [struct {
+            key: string,
+            value: any,
+        }],
+        handler?: #[id="function"] string,
+        pair?: struct {
+            key: string,
+            value: any,
+        },
+        out?: struct {
+            key: string,
+            value: any,
+        },
+    },
+    schedule?: struct {
+        delay: int,
+    },
+    schematic?: (
+        struct {
+            text?: Text,
+            ...schematicBase,
+            mergeData?: minecraft:entity[text_display],
+        } |
+        struct {
+            id: #[id="block"] string,
+            ...schematicBase,
+            hasProp?: BOOL,
+            prop?: mcdoc:block_states[[id]],
+            alwaysShow?: BOOL,
+            mergeData?: minecraft:entity[block_display],
+        } |
+        struct {
+            id: #[id="item"] string,
+            ...schematicBase,
+            hasComponent?: BOOL,
+            component?: ItemBase,
+            mergeData?: minecraft:entity[itemdisplay],
+        } |
+    ),
+    uuid?: struct {
+        array: int[] @ 4,
+        hex: HexUUID,
+    },
+    bright?: struct {
+        brightness: int @ 0..15,
+    },
+    tick?: struct {
+        handler: #[id="function"] string,
+        callback?: #[id="function"] string,
+        keepData?: BOOL,
+    },
+}
+
+type schematicBase = struct {
+    tick: int,
+    bright?: int @ -1..15,
+    dropData?: BOOL,
+    callback?: #[id="function"] string,
+    transformation?: (
+        struct {
+            /// Translation in [x, y, z].
+            translation?: [float] @ 3,
+            /// Using this rotation is enough for most transformations.
+            left_rotation?: Rotation,
+            /// For more complex transformations. Applied **before** scaling.
+            right_rotation?: Rotation,
+            /// Scale in [x, y, z].
+            scale?: [float] @ 3,
+        } |
+        ([float] @ 16) |
+    ),
+}

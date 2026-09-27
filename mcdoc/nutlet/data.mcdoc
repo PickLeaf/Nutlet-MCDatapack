@@ -1,0 +1,8 @@
+dispatch minecraft:custom_data["nutlet:structure_check"] to StructureCheck
+
+struct StructureCheck {
+    x: int,
+    y: int,
+    z: int,
+    func: #[id="function"] string,
+}

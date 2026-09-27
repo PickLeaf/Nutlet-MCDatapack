@@ -3,8 +3,8 @@
 # --Command Context : the execute rotation
 # --nutlet:var schematic.text[string] : Raw JSON Text, 1.21.5- format
 # --nutlet:var schematic.tick[int] : ticks that the phantom item of schematic will continue existing, 0 for infinite
-# --nutlet:var schematic.transformation[float] : The rendering transformation applied to model after normal entity orientation https://minecraft.wiki/w/Display https://zh.minecraft.wiki/w/展示实体
-# --nutlet:var schematic.bright[int] : brightness of the item display, -1 for auto
+# --nutlet:var schematic.transformation[float] (optional): The rendering transformation applied to model after normal entity orientation https://minecraft.wiki/w/Display https://zh.minecraft.wiki/w/展示实体
+# --nutlet:var schematic.bright[int] (optional): brightness of the item display, -1 for auto
 # --nutlet:var schematic.mergeData[compound] (optional): the data will "/data merge" to text display entity
 # --nutlet:var schematic.dropData[enum{1b,*}] (optional): delete data nutlet:var schematic when function done
 # --nutlet:var schematic.callback[string] (optional): a function will execute when text display entity created

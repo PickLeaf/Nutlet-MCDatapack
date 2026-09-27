@@ -18,7 +18,8 @@ execute unless predicate nutlet:block_facing/down \
     unless predicate nutlet:block_facing/south \
     unless predicate nutlet:block_facing/west \
     unless predicate nutlet:block_facing/east \
-        run return run data modify storage nutlet:var facing.success set value 0b
+        run return run \
+            data modify storage nutlet:var facing.success set value 0b
 
 execute if predicate nutlet:block_facing/down \
     run data modify storage nutlet:var facing.x_rotation set value 90
